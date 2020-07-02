@@ -12,6 +12,8 @@
 		C19431DC24AE03500033A3B2 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19431DA24AE03500033A3B2 /* StationTableViewCell.swift */; };
 		C19431DD24AE03500033A3B2 /* StationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19431DB24AE03500033A3B2 /* StationTableViewCell.xib */; };
 		C19431DF24AE04A30033A3B2 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19431DE24AE04A30033A3B2 /* UITableView+Extensions.swift */; };
+		C1A5FCBD24AE333900E05E3B /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A5FCBC24AE333900E05E3B /* UIViewController+Extensions.swift */; };
+		C1A5FCBF24AE3BA800E05E3B /* Number+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A5FCBE24AE3BA800E05E3B /* Number+Extensions.swift */; };
 		C1B5FBC424ACE14400028C03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBC324ACE14400028C03 /* AppDelegate.swift */; };
 		C1B5FBC624ACE14400028C03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBC524ACE14400028C03 /* SceneDelegate.swift */; };
 		C1B5FBC824ACE14400028C03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBC724ACE14400028C03 /* ViewController.swift */; };
@@ -54,6 +56,8 @@
 		C19431DA24AE03500033A3B2 /* StationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
 		C19431DB24AE03500033A3B2 /* StationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationTableViewCell.xib; sourceTree = "<group>"; };
 		C19431DE24AE04A30033A3B2 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		C1A5FCBC24AE333900E05E3B /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		C1A5FCBE24AE3BA800E05E3B /* Number+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Extensions.swift"; sourceTree = "<group>"; };
 		C1B5FBC024ACE14400028C03 /* RyanAirTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RyanAirTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B5FBC324ACE14400028C03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1B5FBC524ACE14400028C03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 			children = (
 				C1B5FBEB24ACEAA900028C03 /* String+Utils.swift */,
 				C19431DE24AE04A30033A3B2 /* UITableView+Extensions.swift */,
+				C1A5FCBC24AE333900E05E3B /* UIViewController+Extensions.swift */,
+				C1A5FCBE24AE3BA800E05E3B /* Number+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -442,12 +448,14 @@
 				C1B5FBFB24ACF5E100028C03 /* FlightInfoInteractor.swift in Sources */,
 				C1B5FBFA24ACF5E100028C03 /* FlightInfoViewController.swift in Sources */,
 				C1B5FC1724AD0A9D00028C03 /* Station.swift in Sources */,
+				C1A5FCBD24AE333900E05E3B /* UIViewController+Extensions.swift in Sources */,
 				C1B5FBC624ACE14400028C03 /* SceneDelegate.swift in Sources */,
 				C1B5FBF824ACF5E100028C03 /* FlightInfoPresenter.swift in Sources */,
 				C19431DC24AE03500033A3B2 /* StationTableViewCell.swift in Sources */,
 				C19431DF24AE04A30033A3B2 /* UITableView+Extensions.swift in Sources */,
 				C19431D924ADE9110033A3B2 /* RequestManager.swift in Sources */,
 				C1B5FBEF24ACF01800028C03 /* FlightRequest.swift in Sources */,
+				C1A5FCBF24AE3BA800E05E3B /* Number+Extensions.swift in Sources */,
 				C1B5FBFD24ACF5E100028C03 /* FlightInfoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

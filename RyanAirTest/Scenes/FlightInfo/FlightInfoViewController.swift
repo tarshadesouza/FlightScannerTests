@@ -11,50 +11,78 @@
 import UIKit
 import Foundation
 
+enum TravelType: String {
+	case origin
+	case destination
+}
+
 protocol FlightInfoViewProtocol: class {
 	func returnStations(viewModel: FlightInfo.Model.ViewModel)
 }
 
 class FlightInfoViewController: UIViewController {
 	
+	@IBOutlet var steppers: [UIStepper]! {
+		didSet {
+			steppers.forEach { component in
+				component.maximumValue = maxStepperValue
+			}
+		}
+	}
+
 	@IBOutlet weak var originButton: UIButton!
 	@IBOutlet weak var destinationButton: UIButton!
-	@IBOutlet weak var outgoingButton: UIButton!
+	@IBOutlet weak var outgoingTxtFld: UITextField! {
+		didSet {
+			outgoingTxtFld.placeholder = "Outgoing date"
+		}
+	}
 	
 	@IBOutlet weak var adultsLbl: UILabel! {
 		didSet {
 			adultsLbl.text = "adults"
 		}
 	}
-	@IBOutlet weak var adultStepper: UIStepper!
+
+	@IBOutlet weak var adultsCounterLbl: UILabel! {
+		didSet {
+			adultsCounterLbl.text = initalCounterValue
+		}
+	}
+	
+	@IBOutlet weak var teenagersCounterLbl: UILabel! {
+		didSet {
+			teenagersCounterLbl.text = initalCounterValue
+		}
+	}
 	
 	@IBOutlet weak var teenagersLbl: UILabel! {
 		didSet {
 			teenagersLbl.text = "teenagers"
 		}
 	}
-	@IBOutlet weak var teenageStepper: UIStepper!
+
+	@IBOutlet weak var childrenCounterLbl: UILabel! {
+		didSet {
+			childrenCounterLbl.text = initalCounterValue
+		}
+	}
 	
 	@IBOutlet weak var childrenLabel: UILabel! {
 		didSet {
 			childrenLabel.text = "children"
 		}
 	}
-	@IBOutlet weak var childStepper: UIStepper!
 	
 	@IBOutlet weak var searchButton: UIButton!
 	
-	@IBOutlet weak var datePicker: UIDatePicker! {
-		didSet {
-			datePicker.isHidden = true
-		}
-	}
-	
-	var router: FlightInfoRouterProtocol?
+	private var datePicker: UIDatePicker?
 	private var interactor: FlightInfoInteractorProtocol?
-	let searchContentView = SearchInfoView()
-	
 	var stations: [Station]?
+	var router: FlightInfoRouterProtocol?
+	let searchContentView = SearchInfoView()
+	private let maxStepperValue = 6.0
+	private let initalCounterValue = "0"
 	
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
 		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -68,22 +96,29 @@ class FlightInfoViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		doSomething()
-		configView()
+		configDatePicker()
 		interactor?.getStations()
-		
-//		let searchContentView = SearchInfoView(results: stations)
-
 	}
 	
-	private func configView() {
-		
+	private func showStationPicker(with direction: TravelType) {
+		createActionSheet(containerView: searchContentView, title: direction.rawValue)
 	}
 	
-	private func getStations() {
-		
+	private func configDatePicker() {
+		datePicker = UIDatePicker()
+		datePicker?.datePickerMode = .date
+		datePicker?.addTarget(self, action: #selector(FlightInfoViewController.dateChanged(datePicker:)), for: .valueChanged)
+		hideKeyboardWhenTappedAround()
+		outgoingTxtFld.inputView = datePicker
 	}
 	
+	@objc private func dateChanged(datePicker: UIDatePicker) {
+		let formatter = DateFormatter()
+		formatter.dateFormat = "dd/MM/yyyy"
+		outgoingTxtFld.text = formatter.string(from: datePicker.date)
+		view.endEditing(true)
+	}
+		
 	private func initScene() {
 		let presenter = FlightInfoPresenter(view: self)
 		let repository = RemoteRepository()
@@ -91,24 +126,27 @@ class FlightInfoViewController: UIViewController {
 		router = FlightInfoRouter(view: self, dataStore: interactor)
 	}
 	
-	//MARK: IBOutlet Actions
+	// MARK: IBOutlet Actions
 	
 	@IBAction func didTapOriginBtn(_ sender: UIButton) {
+		showStationPicker(with: .origin)
 	}
 	
 	@IBAction func didTapDestinationBtn(_ sender: UIButton) {
+		showStationPicker(with: .destination)
 	}
 	
-	@IBAction func didTapOutgoingBtn(_ sender: UIButton) {
-	}
-	
-	@IBAction func didTapAdultStepper(_ sender: UIStepper) {
-	}
-	
-	@IBAction func didTapTeenageStepper(_ sender: UIStepper) {
-	}
-	
-	@IBAction func didTapChildStepper(_ sender: UIStepper) {
+	@IBAction func didTapStepper(_ sender: UIStepper) {
+		switch sender.tag {
+		case 0:
+			adultsCounterLbl.text = "\(sender.value.cleanValue)"
+		case 1:
+			teenagersCounterLbl.text = "\(sender.value.cleanValue)"
+		case 2:
+			childrenCounterLbl.text = "\(sender.value.cleanValue)"
+		default:
+			return
+		}
 	}
 	
 	@IBAction func didTapSearchBtn(_ sender: UIButton) {
@@ -131,23 +169,10 @@ extension FlightInfoViewController {
 	}
 }
 
-//Interaction
-extension FlightInfoViewController {
-	
-	func doSomething() {
-		
-		//		let request = FlightInfo.Model.Request(requestQuery: FlightRequest())
-		//        interactor?.doSomething(request: request)
-	}
-}
-
 //Presentation
 extension FlightInfoViewController: FlightInfoViewProtocol {
 	func returnStations(viewModel: FlightInfo.Model.ViewModel) {
-		print("RETURNED", viewModel.stations?.count)
 		stations = viewModel.stations
-		
 		searchContentView.stations = stations
-		createActionSheet(containerView: searchContentView, title: "this is a test")
 	}
 }

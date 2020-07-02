@@ -10,8 +10,8 @@ import UIKit
 
 class StationTableViewCell: UITableViewCell {
 	
+	@IBOutlet weak var codeLbl: UILabel!
 	@IBOutlet weak var nameLbl: UILabel!
-	@IBOutlet weak var countryLbl: UILabel!
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()
@@ -22,12 +22,12 @@ class StationTableViewCell: UITableViewCell {
 	}
 	
 	override func prepareForReuse() {
+		codeLbl.text = ""
 		nameLbl.text = ""
-		countryLbl.text = ""
 	}
 	
 	func configureCell(with station: Station) {
+		codeLbl.text = station.code
 		nameLbl.text = station.name
-		countryLbl.text = station.countryName
 	}
 }

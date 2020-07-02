@@ -10,11 +10,11 @@ import Foundation
 
  class Station: Codable {
 	var name: String
-	var countryName: String
+	var code: String
 	
 	enum CodingKeys: String, CodingKey {
 		case name
-		case countryName
+		case code
 	}
 }
 
