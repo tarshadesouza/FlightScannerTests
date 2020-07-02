@@ -8,8 +8,13 @@
 
 import UIKit
 
-protocol ContactsViewDelegate: class {
-	//    func contactSelected(contactsView: ContactsView, contact: ContactCellViewModel)
+enum TravelType: String {
+	case origin
+	case destination
+}
+
+protocol SearchViewDelegate: class {
+	func stationSelected(stationCode: StationViewObjectProtocol)
 }
 
 public class SearchInfoView: UIView {
@@ -22,22 +27,24 @@ public class SearchInfoView: UIView {
 			tableView.reloadData()
 		}
 	}
+	var travelDirection: TravelType?
 	
 	private var filteredData = [Station]()
 	private var isSearchActive = false
 	
 	let noContactsLabel = UILabel()
 	
-	weak var delegate: ContactsViewDelegate?
+	weak var delegate: SearchViewDelegate?
 	
 	override init(frame: CGRect) {
 		super.init(frame: .zero)
 		configView()
 	}
 	
-	init(results: [Station]?) {
+	init(results: [Station]?, travelDirection: TravelType) {
 		super.init(frame: .zero)
 		self.stations = results
+		self.travelDirection = travelDirection
 		configView()
 	}
 	
@@ -82,7 +89,7 @@ public class SearchInfoView: UIView {
 		tableView.translatesAutoresizingMaskIntoConstraints = false
 		tableView.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor).isActive = true
 	}
-		
+	
 	func configNoContactsLabel() {
 		noContactsLabel.font = UIFont.systemFont(ofSize: 14)
 		noContactsLabel.textColor = .darkGray
@@ -135,8 +142,13 @@ extension SearchInfoView: UITableViewDataSource, UITableViewDelegate {
 		return cell
 	}
 	
-	//    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-	//        delegate?.contactSelected(contactsView: self, contact: sections[indexPath.section].contacts[indexPath.row])
-	//    }
+	public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		guard let stations = stations else {
+			return
+		}
+		let data = stations[indexPath.row]
+		let selected = SelectedStation(stationCode: data.code, travelDirection: travelDirection)
+		delegate?.stationSelected(stationCode: selected)
+	}
 	
 }

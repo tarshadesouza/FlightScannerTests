@@ -11,11 +11,6 @@
 import UIKit
 import Foundation
 
-enum TravelType: String {
-	case origin
-	case destination
-}
-
 protocol FlightInfoViewProtocol: class {
 	func returnStations(viewModel: FlightInfo.Model.ViewModel)
 }
@@ -80,7 +75,7 @@ class FlightInfoViewController: UIViewController {
 	private var interactor: FlightInfoInteractorProtocol?
 	var stations: [Station]?
 	var router: FlightInfoRouterProtocol?
-	let searchContentView = SearchInfoView()
+	var searchContentView: SearchInfoView?
 	private let maxStepperValue = 6.0
 	private let initalCounterValue = "0"
 	
@@ -101,7 +96,13 @@ class FlightInfoViewController: UIViewController {
 	}
 	
 	private func showStationPicker(with direction: TravelType) {
-		createActionSheet(containerView: searchContentView, title: direction.rawValue)
+		searchContentView = SearchInfoView(results: stations, travelDirection: direction)
+		guard let view = searchContentView else {
+			return
+		}
+		view.delegate = self
+		
+		createActionSheet(containerView: view, title: direction.rawValue)
 	}
 	
 	private func configDatePicker() {
@@ -173,6 +174,23 @@ extension FlightInfoViewController {
 extension FlightInfoViewController: FlightInfoViewProtocol {
 	func returnStations(viewModel: FlightInfo.Model.ViewModel) {
 		stations = viewModel.stations
-		searchContentView.stations = stations
+	}
+}
+
+// MARK: Delegate for station selection pop up
+extension FlightInfoViewController: SearchViewDelegate {
+	func stationSelected(stationCode: StationViewObjectProtocol) {
+		switch stationCode.travelDirection {
+		case .destination:
+			destinationButton.setTitle(stationCode.stationCode, for: .normal)
+		case .origin:
+			originButton.setTitle(stationCode.stationCode, for: .normal)
+		case .none:
+			return
+		}
+	}
+	
+	func stationSelected(stationCode: String) {
+		
 	}
 }

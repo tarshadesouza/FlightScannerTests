@@ -25,3 +25,13 @@ class StationInfo: Codable {
 		case stations
 	}
 }
+
+protocol StationViewObjectProtocol {
+	var stationCode: String? { get set }
+	var travelDirection: TravelType? { get set }
+}
+
+struct SelectedStation: StationViewObjectProtocol {
+	var stationCode: String?
+	var travelDirection: TravelType?
+}
