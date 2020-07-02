@@ -10,11 +10,10 @@ import Foundation
 
 public struct FlightRequest: Encodable {
     
-    let origin: String
-    let destination: String
-    let dateOut: String
-    let dateIn: String
-    let adults: String
-    let teenagers: String
-    let children: String
+    let origin: String?
+    let destination: String?
+    let dateOut: String?
+    let adults: String?
+    let teenagers: String?
+    let children: String?
 }

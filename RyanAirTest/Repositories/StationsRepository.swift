@@ -11,14 +11,14 @@ import Alamofire
 
 typealias StationsResult = Swift.Result<StationInfo, AFError>
 
-protocol Repository {
+protocol StationRepositoryProtocol {
     func retrieveStations(completion: @escaping (StationsResult) -> Void)
-//    func retrieveCharactersViaName<T>(queryString: String, completion: @escaping (T?, Error?) -> Void)
 }
 
 /// Manages connection to the backend
-class RemoteRepository: BaseRepository, Repository {
-	init () {
+class StationsRepository: BaseRepository, StationRepositoryProtocol {
+	
+	init() {
 		super.init(manager: RequestManager())
 	}
 	

@@ -122,9 +122,9 @@ class FlightInfoViewController: UIViewController {
 		
 	private func initScene() {
 		let presenter = FlightInfoPresenter(view: self)
-		let repository = RemoteRepository()
-		interactor = FlightInfoInteractor(presenter: presenter, repository: repository)
+		interactor = FlightInfoInteractor(presenter: presenter)
 		router = FlightInfoRouter(view: self, dataStore: interactor)
+		router?.viewController = self
 	}
 	
 	// MARK: IBOutlet Actions
@@ -151,22 +151,20 @@ class FlightInfoViewController: UIViewController {
 	}
 	
 	@IBAction func didTapSearchBtn(_ sender: UIButton) {
+		let flightRequest = FlightRequest(origin: originButton.titleLabel?.text,
+										  destination: destinationButton.titleLabel?.text,
+										  dateOut: outgoingTxtFld.text,
+										  adults: adultsCounterLbl.text,
+										  teenagers: teenagersCounterLbl.text,
+										  children: childrenCounterLbl.text)
+		routeToFlightDetail(with: flightRequest)
 	}
 }
 
 //Routing
 extension FlightInfoViewController {
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if let scene = segue.identifier {
-			let selector = Selector(("routeTo\(scene):"))
-			if let router = router, router.responds(to: selector) {
-				router.perform(selector, with: segue)
-			}
-		}
-	}
-	
-	private func routeToSomewhere() {
-		router?.routeToSomewhere(nil)
+	private func routeToFlightDetail(with request: FlightRequest) {
+		router?.toFindFlights(with: request)
 	}
 }
 
@@ -179,18 +177,14 @@ extension FlightInfoViewController: FlightInfoViewProtocol {
 
 // MARK: Delegate for station selection pop up
 extension FlightInfoViewController: SearchViewDelegate {
-	func stationSelected(stationCode: StationViewObjectProtocol) {
+	func stationSelected(stationCode: Station) {
 		switch stationCode.travelDirection {
 		case .destination:
-			destinationButton.setTitle(stationCode.stationCode, for: .normal)
+			destinationButton.setTitle(stationCode.code, for: .normal)
 		case .origin:
-			originButton.setTitle(stationCode.stationCode, for: .normal)
+			originButton.setTitle(stationCode.code, for: .normal)
 		case .none:
 			return
 		}
-	}
-	
-	func stationSelected(stationCode: String) {
-		
 	}
 }

@@ -21,10 +21,10 @@ protocol FlightInfoDataStoreProtocol {
 }
 
 class FlightInfoInteractor: FlightInfoInteractorProtocol {
-	var repository: Repository?
+	var repository: StationRepositoryProtocol?
 	var presenter: FlightInfoPresenterProtocol
 	
-	init(presenter: FlightInfoPresenterProtocol, repository: Repository) {
+	init(presenter: FlightInfoPresenterProtocol, repository: StationRepositoryProtocol = StationsRepository()) {
 		self.repository = repository
 		self.presenter = presenter
 	}

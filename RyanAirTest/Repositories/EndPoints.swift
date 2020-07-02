@@ -53,7 +53,6 @@ extension RyanAirEndPoints {
 			let params = ["origin": query.origin,
 						  "destination": query.destination,
 						  "dateout": query.dateOut,
-						  "datein": query.dateIn,
 						  "adt": query.adults,
 						  "teen": query.teenagers,
 						  "chd": query.children]

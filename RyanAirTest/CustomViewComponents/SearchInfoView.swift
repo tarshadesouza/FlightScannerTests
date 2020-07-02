@@ -14,7 +14,7 @@ enum TravelType: String {
 }
 
 protocol SearchViewDelegate: class {
-	func stationSelected(stationCode: StationViewObjectProtocol)
+	func stationSelected(stationCode: Station)
 }
 
 public class SearchInfoView: UIView {
@@ -22,11 +22,7 @@ public class SearchInfoView: UIView {
 	let mainStackView = UIStackView()
 	let searchBar = UITextField()
 	let tableView = UITableView()
-	var stations: [Station]? {
-		didSet {
-			tableView.reloadData()
-		}
-	}
+	var stations: [Station]?
 	var travelDirection: TravelType?
 	
 	private var filteredData = [Station]()
@@ -133,22 +129,23 @@ extension SearchInfoView: UITableViewDataSource, UITableViewDelegate {
 	}
 	
 	public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		guard let cell = tableView.dequeueReusableCell(cellType: StationTableViewCell.self), let stations = stations else {
+		guard let cell = tableView.dequeueReusableCell(cellType: StationTableViewCell.self) else {
 			return UITableViewCell()
 		}
-		let stationsList = isSearchActive ? filteredData[indexPath.row] : stations[indexPath.row]
+		guard let stationsList = isSearchActive ? filteredData[indexPath.row] : stations?[indexPath.row] else {
+			return UITableViewCell()
+		}
 		
 		cell.configureCell(with: stationsList)
 		return cell
 	}
 	
 	public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		guard let stations = stations else {
+		guard let data = isSearchActive ? filteredData[indexPath.row] : stations?[indexPath.row] else {
 			return
 		}
-		let data = stations[indexPath.row]
-		let selected = SelectedStation(stationCode: data.code, travelDirection: travelDirection)
-		delegate?.stationSelected(stationCode: selected)
+		data.travelDirection = travelDirection
+		delegate?.stationSelected(stationCode: data)
 	}
 	
 }
