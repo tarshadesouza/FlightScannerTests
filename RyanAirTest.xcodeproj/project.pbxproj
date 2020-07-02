@@ -1,0 +1,718 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5960A80B5E023FB37FBD2F28 /* Pods_RyanAirTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFD1C4FF7C54F26A308B6C1 /* Pods_RyanAirTest.framework */; };
+		C1B5FBC424ACE14400028C03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBC324ACE14400028C03 /* AppDelegate.swift */; };
+		C1B5FBC624ACE14400028C03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBC524ACE14400028C03 /* SceneDelegate.swift */; };
+		C1B5FBC824ACE14400028C03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBC724ACE14400028C03 /* ViewController.swift */; };
+		C1B5FBCB24ACE14400028C03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B5FBC924ACE14400028C03 /* Main.storyboard */; };
+		C1B5FBCD24ACE14500028C03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B5FBCC24ACE14500028C03 /* Assets.xcassets */; };
+		C1B5FBD024ACE14500028C03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B5FBCE24ACE14500028C03 /* LaunchScreen.storyboard */; };
+		C1B5FBDB24ACE14500028C03 /* RyanAirTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBDA24ACE14500028C03 /* RyanAirTestTests.swift */; };
+		C1B5FBE724ACE47D00028C03 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBE624ACE47D00028C03 /* BaseRepository.swift */; };
+		C1B5FBE924ACE84C00028C03 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBE824ACE84C00028C03 /* EndPoints.swift */; };
+		C1B5FBEC24ACEAA900028C03 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBEB24ACEAA900028C03 /* String+Utils.swift */; };
+		C1B5FBEF24ACF01800028C03 /* FlightRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBEE24ACF01800028C03 /* FlightRequest.swift */; };
+		C1B5FBF824ACF5E100028C03 /* FlightInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBF224ACF5E100028C03 /* FlightInfoPresenter.swift */; };
+		C1B5FBF924ACF5E100028C03 /* FlightInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBF324ACF5E100028C03 /* FlightInfoRouter.swift */; };
+		C1B5FBFA24ACF5E100028C03 /* FlightInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBF424ACF5E100028C03 /* FlightInfoViewController.swift */; };
+		C1B5FBFB24ACF5E100028C03 /* FlightInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBF524ACF5E100028C03 /* FlightInfoInteractor.swift */; };
+		C1B5FBFC24ACF5E100028C03 /* Test Template in Resources */ = {isa = PBXBuildFile; fileRef = C1B5FBF624ACF5E100028C03 /* Test Template */; };
+		C1B5FBFD24ACF5E100028C03 /* FlightInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBF724ACF5E100028C03 /* FlightInfoModel.swift */; };
+		C1B5FC0124ACF69400028C03 /* FlightInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1B5FC0024ACF69400028C03 /* FlightInfoViewController.xib */; };
+		C1B5FC0624ACFB6F00028C03 /* GlobileActionSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FC0524ACFB6F00028C03 /* GlobileActionSheetController.swift */; };
+		C1B5FC0824ACFB7C00028C03 /* GlobileActionSheetController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1B5FC0724ACFB7C00028C03 /* GlobileActionSheetController.xib */; };
+		C1B5FC0C24AD056200028C03 /* SearchInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FC0B24AD056200028C03 /* SearchInfoView.swift */; };
+		C1B5FC1024AD072F00028C03 /* SearchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FC0F24AD072F00028C03 /* SearchCellViewModel.swift */; };
+		C1B5FC1724AD0A9D00028C03 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FC1624AD0A9D00028C03 /* Station.swift */; };
+		C1B5FC1924AD0EFC00028C03 /* RemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FC1824AD0EFC00028C03 /* RemoteRepository.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C1B5FBD724ACE14500028C03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1B5FBB824ACE14400028C03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1B5FBBF24ACE14400028C03;
+			remoteInfo = RyanAirTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3E72E6EBE7C02F2513B2EBCC /* Pods-RyanAirTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirTest.debug.xcconfig"; path = "Target Support Files/Pods-RyanAirTest/Pods-RyanAirTest.debug.xcconfig"; sourceTree = "<group>"; };
+		B935F5531950F32CA85AA172 /* Pods-RyanAirTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirTest.release.xcconfig"; path = "Target Support Files/Pods-RyanAirTest/Pods-RyanAirTest.release.xcconfig"; sourceTree = "<group>"; };
+		C1B5FBC024ACE14400028C03 /* RyanAirTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RyanAirTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1B5FBC324ACE14400028C03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C1B5FBC524ACE14400028C03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C1B5FBC724ACE14400028C03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C1B5FBCA24ACE14400028C03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C1B5FBCC24ACE14500028C03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1B5FBCF24ACE14500028C03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C1B5FBD124ACE14500028C03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1B5FBD624ACE14500028C03 /* RyanAirTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RyanAirTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1B5FBDA24ACE14500028C03 /* RyanAirTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanAirTestTests.swift; sourceTree = "<group>"; };
+		C1B5FBDC24ACE14500028C03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1B5FBE624ACE47D00028C03 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		C1B5FBE824ACE84C00028C03 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		C1B5FBEB24ACEAA900028C03 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		C1B5FBEE24ACF01800028C03 /* FlightRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightRequest.swift; sourceTree = "<group>"; };
+		C1B5FBF224ACF5E100028C03 /* FlightInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInfoPresenter.swift; sourceTree = "<group>"; };
+		C1B5FBF324ACF5E100028C03 /* FlightInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInfoRouter.swift; sourceTree = "<group>"; };
+		C1B5FBF424ACF5E100028C03 /* FlightInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInfoViewController.swift; sourceTree = "<group>"; };
+		C1B5FBF524ACF5E100028C03 /* FlightInfoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInfoInteractor.swift; sourceTree = "<group>"; };
+		C1B5FBF624ACF5E100028C03 /* Test Template */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Test Template"; sourceTree = "<group>"; };
+		C1B5FBF724ACF5E100028C03 /* FlightInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInfoModel.swift; sourceTree = "<group>"; };
+		C1B5FC0024ACF69400028C03 /* FlightInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlightInfoViewController.xib; sourceTree = "<group>"; };
+		C1B5FC0524ACFB6F00028C03 /* GlobileActionSheetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobileActionSheetController.swift; sourceTree = "<group>"; };
+		C1B5FC0724ACFB7C00028C03 /* GlobileActionSheetController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GlobileActionSheetController.xib; sourceTree = "<group>"; };
+		C1B5FC0B24AD056200028C03 /* SearchInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInfoView.swift; sourceTree = "<group>"; };
+		C1B5FC0F24AD072F00028C03 /* SearchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellViewModel.swift; sourceTree = "<group>"; };
+		C1B5FC1624AD0A9D00028C03 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		C1B5FC1824AD0EFC00028C03 /* RemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRepository.swift; sourceTree = "<group>"; };
+		DBFD1C4FF7C54F26A308B6C1 /* Pods_RyanAirTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RyanAirTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C1B5FBBD24ACE14400028C03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5960A80B5E023FB37FBD2F28 /* Pods_RyanAirTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1B5FBD324ACE14500028C03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BD6CE1A711345801A45438F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E72E6EBE7C02F2513B2EBCC /* Pods-RyanAirTest.debug.xcconfig */,
+				B935F5531950F32CA85AA172 /* Pods-RyanAirTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9107A546B52694C85DC5AD56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBFD1C4FF7C54F26A308B6C1 /* Pods_RyanAirTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1B5FBB724ACE14400028C03 = {
+			isa = PBXGroup;
+			children = (
+				C1B5FBC224ACE14400028C03 /* RyanAirTest */,
+				C1B5FBD924ACE14500028C03 /* RyanAirTestTests */,
+				C1B5FBC124ACE14400028C03 /* Products */,
+				1BD6CE1A711345801A45438F /* Pods */,
+				9107A546B52694C85DC5AD56 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C1B5FBC124ACE14400028C03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5FBC024ACE14400028C03 /* RyanAirTest.app */,
+				C1B5FBD624ACE14500028C03 /* RyanAirTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1B5FBC224ACE14400028C03 /* RyanAirTest */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5FC0424ACFB4D00028C03 /* CustomViewComponents */,
+				C1B5FBF124ACF5C800028C03 /* Scenes */,
+				C1B5FBED24ACF00800028C03 /* Model */,
+				C1B5FBEA24ACEA9800028C03 /* Extensions */,
+				C1B5FBE524ACE45800028C03 /* Repositories */,
+				C1B5FBC324ACE14400028C03 /* AppDelegate.swift */,
+				C1B5FBC524ACE14400028C03 /* SceneDelegate.swift */,
+				C1B5FBC724ACE14400028C03 /* ViewController.swift */,
+				C1B5FBC924ACE14400028C03 /* Main.storyboard */,
+				C1B5FBCC24ACE14500028C03 /* Assets.xcassets */,
+				C1B5FBCE24ACE14500028C03 /* LaunchScreen.storyboard */,
+				C1B5FBD124ACE14500028C03 /* Info.plist */,
+			);
+			path = RyanAirTest;
+			sourceTree = "<group>";
+		};
+		C1B5FBD924ACE14500028C03 /* RyanAirTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5FBDA24ACE14500028C03 /* RyanAirTestTests.swift */,
+				C1B5FBDC24ACE14500028C03 /* Info.plist */,
+			);
+			path = RyanAirTestTests;
+			sourceTree = "<group>";
+		};
+		C1B5FBE524ACE45800028C03 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5FBE624ACE47D00028C03 /* BaseRepository.swift */,
+				C1B5FBE824ACE84C00028C03 /* EndPoints.swift */,
+				C1B5FC1824AD0EFC00028C03 /* RemoteRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		C1B5FBEA24ACEA9800028C03 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5FBEB24ACEAA900028C03 /* String+Utils.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C1B5FBED24ACF00800028C03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5FC1624AD0A9D00028C03 /* Station.swift */,
+				C1B5FC1324AD0A6400028C03 /* Data */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C1B5FBF124ACF5C800028C03 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5FBFE24ACF61500028C03 /* FlightInfo */,
+				C1B5FBF624ACF5E100028C03 /* Test Template */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C1B5FBFE24ACF61500028C03 /* FlightInfo */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5FBFF24ACF68200028C03 /* Views */,
+				C1B5FBF724ACF5E100028C03 /* FlightInfoModel.swift */,
+				C1B5FBF524ACF5E100028C03 /* FlightInfoInteractor.swift */,
+				C1B5FBF424ACF5E100028C03 /* FlightInfoViewController.swift */,
+				C1B5FBF324ACF5E100028C03 /* FlightInfoRouter.swift */,
+				C1B5FBF224ACF5E100028C03 /* FlightInfoPresenter.swift */,
+			);
+			path = FlightInfo;
+			sourceTree = "<group>";
+		};
+		C1B5FBFF24ACF68200028C03 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5FC0D24AD071400028C03 /* Cells */,
+				C1B5FC0024ACF69400028C03 /* FlightInfoViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C1B5FC0424ACFB4D00028C03 /* CustomViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5FC0724ACFB7C00028C03 /* GlobileActionSheetController.xib */,
+				C1B5FC0524ACFB6F00028C03 /* GlobileActionSheetController.swift */,
+				C1B5FC0B24AD056200028C03 /* SearchInfoView.swift */,
+			);
+			path = CustomViewComponents;
+			sourceTree = "<group>";
+		};
+		C1B5FC0D24AD071400028C03 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5FC0E24AD071E00028C03 /* CellModel */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C1B5FC0E24AD071E00028C03 /* CellModel */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5FC0F24AD072F00028C03 /* SearchCellViewModel.swift */,
+			);
+			path = CellModel;
+			sourceTree = "<group>";
+		};
+		C1B5FC1324AD0A6400028C03 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5FC1424AD0A6A00028C03 /* Request */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C1B5FC1424AD0A6A00028C03 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5FBEE24ACF01800028C03 /* FlightRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C1B5FBBF24ACE14400028C03 /* RyanAirTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1B5FBDF24ACE14500028C03 /* Build configuration list for PBXNativeTarget "RyanAirTest" */;
+			buildPhases = (
+				E29F7103DD00B6AF3C8807BE /* [CP] Check Pods Manifest.lock */,
+				C1B5FBBC24ACE14400028C03 /* Sources */,
+				C1B5FBBD24ACE14400028C03 /* Frameworks */,
+				C1B5FBBE24ACE14400028C03 /* Resources */,
+				F2D03E757F64341F707039BF /* [CP] Embed Pods Frameworks */,
+				C1B5FBF024ACF36D00028C03 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RyanAirTest;
+			productName = RyanAirTest;
+			productReference = C1B5FBC024ACE14400028C03 /* RyanAirTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C1B5FBD524ACE14500028C03 /* RyanAirTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1B5FBE224ACE14500028C03 /* Build configuration list for PBXNativeTarget "RyanAirTestTests" */;
+			buildPhases = (
+				C1B5FBD224ACE14500028C03 /* Sources */,
+				C1B5FBD324ACE14500028C03 /* Frameworks */,
+				C1B5FBD424ACE14500028C03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1B5FBD824ACE14500028C03 /* PBXTargetDependency */,
+			);
+			name = RyanAirTestTests;
+			productName = RyanAirTestTests;
+			productReference = C1B5FBD624ACE14500028C03 /* RyanAirTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C1B5FBB824ACE14400028C03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Tarsha de Souza";
+				TargetAttributes = {
+					C1B5FBBF24ACE14400028C03 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					C1B5FBD524ACE14500028C03 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = C1B5FBBF24ACE14400028C03;
+					};
+				};
+			};
+			buildConfigurationList = C1B5FBBB24ACE14400028C03 /* Build configuration list for PBXProject "RyanAirTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1B5FBB724ACE14400028C03;
+			productRefGroup = C1B5FBC124ACE14400028C03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1B5FBBF24ACE14400028C03 /* RyanAirTest */,
+				C1B5FBD524ACE14500028C03 /* RyanAirTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1B5FBBE24ACE14400028C03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1B5FBD024ACE14500028C03 /* LaunchScreen.storyboard in Resources */,
+				C1B5FC0124ACF69400028C03 /* FlightInfoViewController.xib in Resources */,
+				C1B5FBFC24ACF5E100028C03 /* Test Template in Resources */,
+				C1B5FBCD24ACE14500028C03 /* Assets.xcassets in Resources */,
+				C1B5FC0824ACFB7C00028C03 /* GlobileActionSheetController.xib in Resources */,
+				C1B5FBCB24ACE14400028C03 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1B5FBD424ACE14500028C03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C1B5FBF024ACF36D00028C03 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
+		E29F7103DD00B6AF3C8807BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RyanAirTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2D03E757F64341F707039BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RyanAirTest/Pods-RyanAirTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RyanAirTest/Pods-RyanAirTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RyanAirTest/Pods-RyanAirTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1B5FBBC24ACE14400028C03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1B5FC0624ACFB6F00028C03 /* GlobileActionSheetController.swift in Sources */,
+				C1B5FBC824ACE14400028C03 /* ViewController.swift in Sources */,
+				C1B5FBE924ACE84C00028C03 /* EndPoints.swift in Sources */,
+				C1B5FBEC24ACEAA900028C03 /* String+Utils.swift in Sources */,
+				C1B5FBC424ACE14400028C03 /* AppDelegate.swift in Sources */,
+				C1B5FBF924ACF5E100028C03 /* FlightInfoRouter.swift in Sources */,
+				C1B5FC1924AD0EFC00028C03 /* RemoteRepository.swift in Sources */,
+				C1B5FC0C24AD056200028C03 /* SearchInfoView.swift in Sources */,
+				C1B5FBE724ACE47D00028C03 /* BaseRepository.swift in Sources */,
+				C1B5FBFB24ACF5E100028C03 /* FlightInfoInteractor.swift in Sources */,
+				C1B5FBFA24ACF5E100028C03 /* FlightInfoViewController.swift in Sources */,
+				C1B5FC1724AD0A9D00028C03 /* Station.swift in Sources */,
+				C1B5FC1024AD072F00028C03 /* SearchCellViewModel.swift in Sources */,
+				C1B5FBC624ACE14400028C03 /* SceneDelegate.swift in Sources */,
+				C1B5FBF824ACF5E100028C03 /* FlightInfoPresenter.swift in Sources */,
+				C1B5FBEF24ACF01800028C03 /* FlightRequest.swift in Sources */,
+				C1B5FBFD24ACF5E100028C03 /* FlightInfoModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1B5FBD224ACE14500028C03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1B5FBDB24ACE14500028C03 /* RyanAirTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C1B5FBD824ACE14500028C03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1B5FBBF24ACE14400028C03 /* RyanAirTest */;
+			targetProxy = C1B5FBD724ACE14500028C03 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C1B5FBC924ACE14400028C03 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1B5FBCA24ACE14400028C03 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C1B5FBCE24ACE14500028C03 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1B5FBCF24ACE14500028C03 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C1B5FBDD24ACE14500028C03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C1B5FBDE24ACE14500028C03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C1B5FBE024ACE14500028C03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E72E6EBE7C02F2513B2EBCC /* Pods-RyanAirTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 882HGE2Q5Y;
+				INFOPLIST_FILE = RyanAirTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TarshaDesouza.RyanAirTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C1B5FBE124ACE14500028C03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B935F5531950F32CA85AA172 /* Pods-RyanAirTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 882HGE2Q5Y;
+				INFOPLIST_FILE = RyanAirTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TarshaDesouza.RyanAirTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C1B5FBE324ACE14500028C03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 882HGE2Q5Y;
+				INFOPLIST_FILE = RyanAirTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TarshaDesouza.RyanAirTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RyanAirTest.app/RyanAirTest";
+			};
+			name = Debug;
+		};
+		C1B5FBE424ACE14500028C03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 882HGE2Q5Y;
+				INFOPLIST_FILE = RyanAirTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TarshaDesouza.RyanAirTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RyanAirTest.app/RyanAirTest";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1B5FBBB24ACE14400028C03 /* Build configuration list for PBXProject "RyanAirTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1B5FBDD24ACE14500028C03 /* Debug */,
+				C1B5FBDE24ACE14500028C03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1B5FBDF24ACE14500028C03 /* Build configuration list for PBXNativeTarget "RyanAirTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1B5FBE024ACE14500028C03 /* Debug */,
+				C1B5FBE124ACE14500028C03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1B5FBE224ACE14500028C03 /* Build configuration list for PBXNativeTarget "RyanAirTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1B5FBE324ACE14500028C03 /* Debug */,
+				C1B5FBE424ACE14500028C03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C1B5FBB824ACE14400028C03 /* Project object */;
+}
