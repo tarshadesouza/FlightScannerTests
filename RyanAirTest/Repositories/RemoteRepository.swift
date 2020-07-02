@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-typealias StationsResult = Swift.Result<Station, AFError>
+typealias StationsResult = Swift.Result<StationInfo, AFError>
 
 protocol Repository {
     func retrieveStations(completion: @escaping (StationsResult) -> Void)
@@ -17,15 +17,15 @@ protocol Repository {
 }
 
 /// Manages connection to the backend
-struct RemoteRepository: Repository {
+class RemoteRepository: BaseRepository, Repository {
+	init () {
+		super.init(manager: RequestManager())
+	}
 	
 	func retrieveStations(completion: @escaping (StationsResult) -> Void) {
-		let queryObj = RyanAirEndPoints.retrieveStations
-		AF.request(queryObj.baseURLString, method: queryObj.httpMethod, parameters: queryObj.params, encoding: JSONEncoding.default, headers: nil).responseDecodable {
-			(response: DataResponse<Station, AFError>) in
+		 let queryObj = RyanAirEndPoints.retrieveStations
+		manager.request(queryObj)?.logResponse().responseDecodable { (response: DataResponse<StationInfo, AFError>) in
 			completion(response.result)
 		}
 	}
-	
-	
 }

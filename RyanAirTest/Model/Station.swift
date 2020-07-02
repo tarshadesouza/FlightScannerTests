@@ -11,4 +11,17 @@ import Foundation
  class Station: Codable {
 	var name: String
 	var countryName: String
+	
+	enum CodingKeys: String, CodingKey {
+		case name
+		case countryName
+	}
+}
+
+class StationInfo: Codable {
+	let stations: [Station]
+	
+	enum CodingKeys: String, CodingKey {
+		case stations
+	}
 }

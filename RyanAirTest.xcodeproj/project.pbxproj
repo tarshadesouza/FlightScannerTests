@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5960A80B5E023FB37FBD2F28 /* Pods_RyanAirTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFD1C4FF7C54F26A308B6C1 /* Pods_RyanAirTest.framework */; };
+		C19431D924ADE9110033A3B2 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19431D824ADE9110033A3B2 /* RequestManager.swift */; };
+		C19431DC24AE03500033A3B2 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19431DA24AE03500033A3B2 /* StationTableViewCell.swift */; };
+		C19431DD24AE03500033A3B2 /* StationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19431DB24AE03500033A3B2 /* StationTableViewCell.xib */; };
+		C19431DF24AE04A30033A3B2 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19431DE24AE04A30033A3B2 /* UITableView+Extensions.swift */; };
 		C1B5FBC424ACE14400028C03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBC324ACE14400028C03 /* AppDelegate.swift */; };
 		C1B5FBC624ACE14400028C03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBC524ACE14400028C03 /* SceneDelegate.swift */; };
 		C1B5FBC824ACE14400028C03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBC724ACE14400028C03 /* ViewController.swift */; };
@@ -29,7 +33,6 @@
 		C1B5FC0624ACFB6F00028C03 /* GlobileActionSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FC0524ACFB6F00028C03 /* GlobileActionSheetController.swift */; };
 		C1B5FC0824ACFB7C00028C03 /* GlobileActionSheetController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1B5FC0724ACFB7C00028C03 /* GlobileActionSheetController.xib */; };
 		C1B5FC0C24AD056200028C03 /* SearchInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FC0B24AD056200028C03 /* SearchInfoView.swift */; };
-		C1B5FC1024AD072F00028C03 /* SearchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FC0F24AD072F00028C03 /* SearchCellViewModel.swift */; };
 		C1B5FC1724AD0A9D00028C03 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FC1624AD0A9D00028C03 /* Station.swift */; };
 		C1B5FC1924AD0EFC00028C03 /* RemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FC1824AD0EFC00028C03 /* RemoteRepository.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +50,10 @@
 /* Begin PBXFileReference section */
 		3E72E6EBE7C02F2513B2EBCC /* Pods-RyanAirTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirTest.debug.xcconfig"; path = "Target Support Files/Pods-RyanAirTest/Pods-RyanAirTest.debug.xcconfig"; sourceTree = "<group>"; };
 		B935F5531950F32CA85AA172 /* Pods-RyanAirTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirTest.release.xcconfig"; path = "Target Support Files/Pods-RyanAirTest/Pods-RyanAirTest.release.xcconfig"; sourceTree = "<group>"; };
+		C19431D824ADE9110033A3B2 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		C19431DA24AE03500033A3B2 /* StationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
+		C19431DB24AE03500033A3B2 /* StationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationTableViewCell.xib; sourceTree = "<group>"; };
+		C19431DE24AE04A30033A3B2 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		C1B5FBC024ACE14400028C03 /* RyanAirTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RyanAirTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B5FBC324ACE14400028C03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1B5FBC524ACE14400028C03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +79,6 @@
 		C1B5FC0524ACFB6F00028C03 /* GlobileActionSheetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobileActionSheetController.swift; sourceTree = "<group>"; };
 		C1B5FC0724ACFB7C00028C03 /* GlobileActionSheetController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GlobileActionSheetController.xib; sourceTree = "<group>"; };
 		C1B5FC0B24AD056200028C03 /* SearchInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInfoView.swift; sourceTree = "<group>"; };
-		C1B5FC0F24AD072F00028C03 /* SearchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellViewModel.swift; sourceTree = "<group>"; };
 		C1B5FC1624AD0A9D00028C03 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		C1B5FC1824AD0EFC00028C03 /* RemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRepository.swift; sourceTree = "<group>"; };
 		DBFD1C4FF7C54F26A308B6C1 /* Pods_RyanAirTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RyanAirTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +174,7 @@
 				C1B5FBE624ACE47D00028C03 /* BaseRepository.swift */,
 				C1B5FBE824ACE84C00028C03 /* EndPoints.swift */,
 				C1B5FC1824AD0EFC00028C03 /* RemoteRepository.swift */,
+				C19431D824ADE9110033A3B2 /* RequestManager.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -176,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				C1B5FBEB24ACEAA900028C03 /* String+Utils.swift */,
+				C19431DE24AE04A30033A3B2 /* UITableView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -233,17 +241,10 @@
 		C1B5FC0D24AD071400028C03 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				C1B5FC0E24AD071E00028C03 /* CellModel */,
+				C19431DA24AE03500033A3B2 /* StationTableViewCell.swift */,
+				C19431DB24AE03500033A3B2 /* StationTableViewCell.xib */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		C1B5FC0E24AD071E00028C03 /* CellModel */ = {
-			isa = PBXGroup;
-			children = (
-				C1B5FC0F24AD072F00028C03 /* SearchCellViewModel.swift */,
-			);
-			path = CellModel;
 			sourceTree = "<group>";
 		};
 		C1B5FC1324AD0A6400028C03 /* Data */ = {
@@ -350,6 +351,7 @@
 				C1B5FC0124ACF69400028C03 /* FlightInfoViewController.xib in Resources */,
 				C1B5FBFC24ACF5E100028C03 /* Test Template in Resources */,
 				C1B5FBCD24ACE14500028C03 /* Assets.xcassets in Resources */,
+				C19431DD24AE03500033A3B2 /* StationTableViewCell.xib in Resources */,
 				C1B5FC0824ACFB7C00028C03 /* GlobileActionSheetController.xib in Resources */,
 				C1B5FBCB24ACE14400028C03 /* Main.storyboard in Resources */,
 			);
@@ -440,9 +442,11 @@
 				C1B5FBFB24ACF5E100028C03 /* FlightInfoInteractor.swift in Sources */,
 				C1B5FBFA24ACF5E100028C03 /* FlightInfoViewController.swift in Sources */,
 				C1B5FC1724AD0A9D00028C03 /* Station.swift in Sources */,
-				C1B5FC1024AD072F00028C03 /* SearchCellViewModel.swift in Sources */,
 				C1B5FBC624ACE14400028C03 /* SceneDelegate.swift in Sources */,
 				C1B5FBF824ACF5E100028C03 /* FlightInfoPresenter.swift in Sources */,
+				C19431DC24AE03500033A3B2 /* StationTableViewCell.swift in Sources */,
+				C19431DF24AE04A30033A3B2 /* UITableView+Extensions.swift in Sources */,
+				C19431D924ADE9110033A3B2 /* RequestManager.swift in Sources */,
 				C1B5FBEF24ACF01800028C03 /* FlightRequest.swift in Sources */,
 				C1B5FBFD24ACF5E100028C03 /* FlightInfoModel.swift in Sources */,
 			);

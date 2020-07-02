@@ -14,7 +14,7 @@ protocol FlightInfoInteractorProtocol: FlightInfoBusinessLogicProtocol, FlightIn
 }
 
 protocol FlightInfoBusinessLogicProtocol {
-  func getStations(request: FlightInfo.Model.Request)
+	func getStations()
 }
 
 protocol FlightInfoDataStoreProtocol {
@@ -22,16 +22,22 @@ protocol FlightInfoDataStoreProtocol {
 
 class FlightInfoInteractor: FlightInfoInteractorProtocol {
 	var repository: Repository?
-    var presenter: FlightInfoPresenterProtocol
-  
+	var presenter: FlightInfoPresenterProtocol
+	
 	init(presenter: FlightInfoPresenterProtocol, repository: Repository) {
 		self.repository = repository
-        self.presenter = presenter
-    }
-
-    func getStations(request: FlightInfo.Model.Request) {
-		
-        let response = FlightInfo.Model.Response()
-        presenter.presentSomething(response: response)
-    }
+		self.presenter = presenter
+	}
+	
+	func getStations() {
+		repository?.retrieveStations(completion: { (stationsResult) in
+			switch stationsResult {
+			case .success(let stations):
+				let response = FlightInfo.Model.Response(stationsObject: stations)
+				self.presenter.returnStations(response: response)
+			case .failure(let error):
+				safeprint(error)
+			}
+		})
+	}
 }

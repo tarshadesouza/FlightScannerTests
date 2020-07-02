@@ -11,7 +11,7 @@
 import UIKit
 
 protocol FlightInfoPresenterProtocol {
-    func presentSomething(response: FlightInfo.Model.Response)
+    func returnStations(response: FlightInfo.Model.Response)
 }
 
 class FlightInfoPresenter: FlightInfoPresenterProtocol {
@@ -22,8 +22,8 @@ class FlightInfoPresenter: FlightInfoPresenterProtocol {
         self.view = view
     }
   
-    func presentSomething(response: FlightInfo.Model.Response) {
-        let viewModel = FlightInfo.Model.ViewModel()
-        view?.displaySomething(viewModel: viewModel)
+    func returnStations(response: FlightInfo.Model.Response) {
+		let viewModel = FlightInfo.Model.ViewModel(stations: response.stationsObject?.stations)
+		view?.returnStations(viewModel: viewModel)
     }
 }

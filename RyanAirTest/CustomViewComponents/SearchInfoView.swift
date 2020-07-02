@@ -8,177 +8,135 @@
 
 import UIKit
 
-protocol SearchInfoViewProtocol: class {
-    func load()
-//    func showContacts(_ sections: [ContactSection])
-//    func showSearchResults(_ sections: [ContactSection])
-}
-
 protocol ContactsViewDelegate: class {
-//    func contactSelected(contactsView: ContactsView, contact: ContactCellViewModel)
+	//    func contactSelected(contactsView: ContactsView, contact: ContactCellViewModel)
 }
 
 public class SearchInfoView: UIView {
-    
-    let mainStackView = UIStackView()
-    let searchBar = UITextField()
-    let resultsList = UITableView()
-	var stations: [Station]?
-    var providerIcon: UIImage?
-    
-    let noContactsLabel = UILabel()
-    
-    weak var delegate: ContactsViewDelegate?
-    
-    override init(frame: CGRect) {
-        super.init(frame: .zero)
-        configView()
-    }
-    
-    init(results: [Station]?) {
-        super.init(frame: .zero)
+	
+	let mainStackView = UIStackView()
+	let searchBar = UITextField()
+	let tableView = UITableView()
+	var stations: [Station]? {
+		didSet {
+			tableView.reloadData()
+		}
+	}
+	
+	private var filteredData = [Station]()
+	private var isSearchActive = false
+	
+	let noContactsLabel = UILabel()
+	
+	weak var delegate: ContactsViewDelegate?
+	
+	override init(frame: CGRect) {
+		super.init(frame: .zero)
+		configView()
+	}
+	
+	init(results: [Station]?) {
+		super.init(frame: .zero)
 		self.stations = results
-        configView()
-    }
-    
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)!
-        configView()
-    }
-    
-    private func configView() {
-//        viewModel.view = self
-        addSubview(mainStackView)
-        addSubview(noContactsLabel)
-        configMainStackView()
+		configView()
+	}
+	
+	required init(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)!
+		configView()
+	}
+	
+	private func configView() {
+		addSubview(mainStackView)
+		addSubview(noContactsLabel)
+		configMainStackView()
 		configSearchBar()
-        configContactsList()
-//        configLoader()
-        configNoContactsLabel()
-    }
-    
-    private func configMainStackView() {
-        mainStackView.axis = .vertical
-        mainStackView.alignment = .leading
-        mainStackView.translatesAutoresizingMaskIntoConstraints = false
-        mainStackView.topAnchor.constraint(equalTo: topAnchor, constant: 9).isActive = true
-        mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16).isActive = true
-        mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        mainStackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-    }
-    
-    private func configSearchBar() {
-        searchBar.placeholder = "Find what your looking for?"
-        searchBar.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
-        mainStackView.addArrangedSubview(searchBar)
-        searchBar.translatesAutoresizingMaskIntoConstraints = false
-        searchBar.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor, constant: -16).isActive = true
-    }
-    
-    private func configContactsList() {
-        resultsList.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 32, right: 0)
-        resultsList.delegate = self
-        resultsList.dataSource = self
-        resultsList.separatorStyle = .none
-//        contactsList.register(ContactViewCell.self, forCellReuseIdentifier: ContactViewCell.reuseIdentifier)
-        mainStackView.addArrangedSubview(resultsList)
-        resultsList.translatesAutoresizingMaskIntoConstraints = false
-        resultsList.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor).isActive = true
-    }
-    
-//    private func configLoader() {
-//        guard let loader = loader else { return }
-//        loader.setupLoaderNib(in: self, globileLoader: loader, loaderType: .primary)
-//        addSubview(loader)
-//        loader.translatesAutoresizingMaskIntoConstraints = false
-//        loader.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-//        loader.topAnchor.constraint(equalTo: topAnchor).isActive = true
-//    }
-    
-    func configNoContactsLabel() {
+		configTableView()
+	}
+	
+	private func configMainStackView() {
+		mainStackView.axis = .vertical
+		mainStackView.alignment = .leading
+		mainStackView.translatesAutoresizingMaskIntoConstraints = false
+		mainStackView.topAnchor.constraint(equalTo: topAnchor, constant: 9).isActive = true
+		mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16).isActive = true
+		mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+		mainStackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+	}
+	
+	private func configSearchBar() {
+		searchBar.placeholder = "Find what your looking for?"
+		searchBar.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
+		mainStackView.addArrangedSubview(searchBar)
+		searchBar.translatesAutoresizingMaskIntoConstraints = false
+		searchBar.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor, constant: -16).isActive = true
+	}
+	
+	private func configTableView() {
+		tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 32, right: 0)
+		tableView.delegate = self
+		tableView.dataSource = self
+		tableView.separatorStyle = .none
+		tableView.register(UINib(nibName: "StationTableViewCell", bundle: nil), forCellReuseIdentifier: StationTableViewCell.defaultReuseIdentifier)
+		mainStackView.addArrangedSubview(tableView)
+		tableView.translatesAutoresizingMaskIntoConstraints = false
+		tableView.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor).isActive = true
+	}
+		
+	func configNoContactsLabel() {
 		noContactsLabel.font = UIFont.systemFont(ofSize: 14)
-        noContactsLabel.textColor = .darkGray
-        noContactsLabel.text = "nothing found"
-        noContactsLabel.translatesAutoresizingMaskIntoConstraints = false
-        noContactsLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        noContactsLabel.topAnchor.constraint(equalTo: topAnchor, constant: 150).isActive = true
-    }
-    
-    @objc func textDidChange(_ sender: UITextField) {
-//        sender.text.map {
-//            if $0.isEmpty {
-//                sections = viewModel.sections
-//                noContactsLabel.isHidden = !sections.isEmpty
-//                contactsList.reloadData()
-//            } else {
-//                viewModel.search($0)
-//            }
-//        }
-    }
-    
-    // MARK: Public methods
-//    public func getContacts() -> [SearchCellViewModel] {
-//        return viewModel.getParsedContacts()
-//    }
-    
-    public func deselectAllRows() {
-        if let index = resultsList.indexPathForSelectedRow {
-            resultsList.deselectRow(at: index, animated: true)
-        }
-    }
-    
-    public func startLoader() {
-//        loader?.isHidden = false
-    }
-    
-    public func endLoader() {
-//        loader?.isHidden = true
-    }
-    
+		noContactsLabel.textColor = .darkGray
+		noContactsLabel.text = "nothing found"
+		noContactsLabel.translatesAutoresizingMaskIntoConstraints = false
+		noContactsLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+		noContactsLabel.topAnchor.constraint(equalTo: topAnchor, constant: 150).isActive = true
+	}
+	
+	@objc func textDidChange(_ sender: UITextField) {
+		filteredData = stations ?? [Station]()
+		
+		sender.text.map {
+			if !$0.isEmpty {
+				filteredData = stations?.filter({ (station) -> Bool in
+					return station.name.lowercased().contains((sender.text?.lowercased())!)
+				}) ?? [Station]()
+				isSearchActive = true
+			} else {
+				isSearchActive = false
+				stations = filteredData
+			}
+			tableView.reloadData()
+		}
+	}
+	
+	// MARK: Public methods
+	public func deselectAllRows() {
+		if let index = tableView.indexPathForSelectedRow {
+			tableView.deselectRow(at: index, animated: true)
+		}
+	}
+	
 }
 
 extension SearchInfoView: UITableViewDataSource, UITableViewDelegate {
-    
-    public func numberOfSections(in tableView: UITableView) -> Int {
-		return 0
+	
+	public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		let stationsList = isSearchActive ? filteredData.count : stations?.count
+		return stationsList ?? 0
 	}
-    
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 0
+	
+	public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		guard let cell = tableView.dequeueReusableCell(cellType: StationTableViewCell.self), let stations = stations else {
+			return UITableViewCell()
+		}
+		let stationsList = isSearchActive ? filteredData[indexPath.row] : stations[indexPath.row]
+		
+		cell.configureCell(with: stationsList)
+		return cell
 	}
-    
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		return UITableViewCell()
-    }
-    
-//    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        delegate?.contactSelected(contactsView: self, contact: sections[indexPath.section].contacts[indexPath.row])
-//    }
-    
-}
-
-extension SearchInfoView: SearchInfoViewProtocol {
-    
-    // Loads view with stations
-    func load() {
-//        viewModel.loadContacts(sectionsAreVisible: sectionsAreVisible)
-    }
-        
-//    func showContacts(_ sections: [ContactSection]) {
-//        self.sections = sections
-//        searchBar.text = ""
-//        endLoader()
-//        noContactsLabel.isHidden = !sections.isEmpty
-//        DispatchQueue.main.async {
-//            self.contactsList.reloadData()
-//        }
-//    }
-//
-//    func showSearchResults(_ sections: [ContactSection]) {
-//        self.sections = sections
-//        noContactsLabel.isHidden = !sections.isEmpty
-//        DispatchQueue.main.async {
-//            self.contactsList.reloadData()
-//        }
-//    }
+	
+	//    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+	//        delegate?.contactSelected(contactsView: self, contact: sections[indexPath.section].contacts[indexPath.row])
+	//    }
+	
 }

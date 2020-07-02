@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct FlightRequest: Encodable {
+public struct FlightRequest: Encodable {
     
     let origin: String
     let destination: String

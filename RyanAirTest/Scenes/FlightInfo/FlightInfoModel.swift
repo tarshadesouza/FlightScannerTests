@@ -18,7 +18,7 @@ enum FlightInfo {
 		}
 		
 		struct Response {
-			var stations: [Station]?
+			var stationsObject: StationInfo?
 		}
 		
 		struct ViewModel {
