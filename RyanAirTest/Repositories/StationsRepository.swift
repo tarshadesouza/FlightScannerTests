@@ -15,7 +15,7 @@ protocol StationRepositoryProtocol {
     func retrieveStations(completion: @escaping (StationsResult) -> Void)
 }
 
-/// Manages connection to the backend
+/// Manages connection to the backend for Stations
 class StationsRepository: BaseRepository, StationRepositoryProtocol {
 	
 	init() {

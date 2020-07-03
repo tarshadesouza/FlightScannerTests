@@ -15,6 +15,7 @@ protocol FlightsRepositoryProtocol {
 	func retrieveFlights(with flightRequest: FlightRequest, completion: @escaping (TripsResult) -> Void)
 }
 
+/// Manages connection to the backend for Flights
 class FlightsRepository: BaseRepository, FlightsRepositoryProtocol {
 
 	init() {

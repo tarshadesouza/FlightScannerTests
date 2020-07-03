@@ -12,9 +12,10 @@ import UIKit
 
 protocol FlightDetailViewProtocol: class {
 	func displayFlights(viewModel: FlightDetail.Model.ViewModel)
+	func showError()
 }
 
-class FlightDetailViewController: UIViewController {
+class FlightDetailViewController: UIViewController, AttentionView {
 		
 	@IBOutlet weak var tableView: UITableView!
 	
@@ -49,6 +50,12 @@ class FlightDetailViewController: UIViewController {
 		tableView.register(UINib(nibName: "FlightDetailTableViewCell", bundle: nil), forCellReuseIdentifier: FlightDetailTableViewCell.defaultReuseIdentifier)
 		tableView.delegate = self
 		tableView.dataSource = self
+	}
+	
+	func showError() {
+		presentErrorAlert(message: "Looks like we experienced an error 😅") { (_, _) in
+			self.navigationController?.popViewController(animated: true)
+		}
 	}
 }
 

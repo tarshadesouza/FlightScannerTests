@@ -13,7 +13,7 @@ class FlightView: UIView {
 	@IBOutlet var contentView: UIView!
 	@IBOutlet weak var flightNo: UILabel!
 	@IBOutlet weak var amountLbl: UILabel!
-	
+		
 	init(flightNumber: String, amount: Double) {
 		super.init(frame: CGRect.zero)
 		commonInit()

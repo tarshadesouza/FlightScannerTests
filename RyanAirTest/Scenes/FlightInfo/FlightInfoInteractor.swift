@@ -37,6 +37,7 @@ class FlightInfoInteractor: FlightInfoInteractorProtocol {
 				self.presenter.returnStations(response: response)
 			case .failure(let error):
 				safeprint(error)
+				self.presenter.didFailToGetStations()
 			}
 		})
 	}

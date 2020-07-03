@@ -8,8 +8,8 @@
 
 import Foundation
 
+///Main flight request all fields optional until further notice
 public struct FlightRequest: Encodable {
-    
     let origin: String?
     let destination: String?
     let dateOut: String?

@@ -12,6 +12,7 @@ import UIKit
 
 protocol FlightDetailPresenterProtocol {
 	func returnFlights(response: FlightDetail.Model.Response)
+	func didFailToGetFlights()
 }
 
 class FlightDetailPresenter: FlightDetailPresenterProtocol {
@@ -20,6 +21,10 @@ class FlightDetailPresenter: FlightDetailPresenterProtocol {
 	
 	init(view: FlightDetailViewProtocol) {
 		self.view = view
+	}
+	
+	func didFailToGetFlights() {
+		view?.showError()
 	}
 	
 	func returnFlights(response: FlightDetail.Model.Response) {
@@ -61,5 +66,4 @@ class FlightDetailPresenter: FlightDetailPresenterProtocol {
 		}
 		return totalFoundFlights
 	}
-	
 }

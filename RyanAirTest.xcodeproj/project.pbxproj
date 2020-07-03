@@ -18,6 +18,8 @@
 		C109296624AF71240006E3A9 /* FlightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C109296524AF71240006E3A9 /* FlightView.xib */; };
 		C109296824AF714D0006E3A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109296724AF714D0006E3A9 /* ContentView.swift */; };
 		C109296A24AF90430006E3A9 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109296924AF90430006E3A9 /* UIStackView+Extensions.swift */; };
+		C109296C24AF9B060006E3A9 /* Alamofire+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109296B24AF9B060006E3A9 /* Alamofire+Extensions.swift */; };
+		C109296E24AF9D1A0006E3A9 /* AttentionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109296D24AF9D1A0006E3A9 /* AttentionView.swift */; };
 		C19431D924ADE9110033A3B2 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19431D824ADE9110033A3B2 /* RequestManager.swift */; };
 		C19431DC24AE03500033A3B2 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19431DA24AE03500033A3B2 /* StationTableViewCell.swift */; };
 		C19431DD24AE03500033A3B2 /* StationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19431DB24AE03500033A3B2 /* StationTableViewCell.xib */; };
@@ -80,6 +82,8 @@
 		C109296524AF71240006E3A9 /* FlightView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlightView.xib; sourceTree = "<group>"; };
 		C109296724AF714D0006E3A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C109296924AF90430006E3A9 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
+		C109296B24AF9B060006E3A9 /* Alamofire+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Extensions.swift"; sourceTree = "<group>"; };
+		C109296D24AF9D1A0006E3A9 /* AttentionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttentionView.swift; sourceTree = "<group>"; };
 		C19431D824ADE9110033A3B2 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		C19431DA24AE03500033A3B2 /* StationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
 		C19431DB24AE03500033A3B2 /* StationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationTableViewCell.xib; sourceTree = "<group>"; };
@@ -283,6 +287,7 @@
 				C1A5FCBC24AE333900E05E3B /* UIViewController+Extensions.swift */,
 				C1A5FCBE24AE3BA800E05E3B /* Number+Extensions.swift */,
 				C109296924AF90430006E3A9 /* UIStackView+Extensions.swift */,
+				C109296B24AF9B060006E3A9 /* Alamofire+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 				C1B5FC0724ACFB7C00028C03 /* GlobileActionSheetController.xib */,
 				C1B5FC0524ACFB6F00028C03 /* GlobileActionSheetController.swift */,
 				C1B5FC0B24AD056200028C03 /* SearchInfoView.swift */,
+				C109296D24AF9D1A0006E3A9 /* AttentionView.swift */,
 			);
 			path = CustomViewComponents;
 			sourceTree = "<group>";
@@ -556,6 +562,7 @@
 				C1B5FC1724AD0A9D00028C03 /* Station.swift in Sources */,
 				C1A5FE7524AE64BD00E05E3B /* FlightDetailViewController.swift in Sources */,
 				C1A5FCBD24AE333900E05E3B /* UIViewController+Extensions.swift in Sources */,
+				C109296C24AF9B060006E3A9 /* Alamofire+Extensions.swift in Sources */,
 				C1A5FE6D24AE59D900E05E3B /* Flight.swift in Sources */,
 				C109228324AF12EC0006E3A9 /* Fare.swift in Sources */,
 				C1B5FBC624ACE14400028C03 /* SceneDelegate.swift in Sources */,
@@ -569,6 +576,7 @@
 				C1A5FCBF24AE3BA800E05E3B /* Number+Extensions.swift in Sources */,
 				C1B5FBFD24ACF5E100028C03 /* FlightInfoModel.swift in Sources */,
 				C1A5FE7624AE64BD00E05E3B /* FlightDetailInteractor.swift in Sources */,
+				C109296E24AF9D1A0006E3A9 /* AttentionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+/// Main common request manager
 public class RequestManager {
 	let client: Alamofire.Session
 	

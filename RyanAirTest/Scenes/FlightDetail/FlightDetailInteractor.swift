@@ -38,6 +38,7 @@ class FlightDetailInteractor: FlightDetailInteractorProtocol {
 				self.presenter.returnFlights(response: response)
 			case .failure(let error):
 				safeprint(error)
+				self.presenter.didFailToGetFlights()
 			}
 		})
 	}

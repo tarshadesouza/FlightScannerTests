@@ -50,6 +50,7 @@ extension RyanAirEndPoints {
 		case .retrieveStations:
 			return nil
 		case .retrieveFlights(let query):
+			//awaiting specification of neccessary fields
 			let params = ["origin": query.origin ?? "",
 						  "destination": query.destination ?? "",
 						  "dateout": query.dateOut ?? "",
@@ -75,24 +76,5 @@ extension RyanAirEndPoints {
 		request.timeoutInterval = TimeInterval(10 * 1000)
 		
 		return try URLEncoding.default.encode(request, with: params)
-	}
-}
-
-extension Alamofire.DataRequest {
-	func logResponse() -> Self {
-		return responseJSON { response in
-			print("** REQUEST URL: \(String(describing: response.request?.url))")
-			if let httpBody = response.request?.httpBody,
-				let paramsString = String(data: httpBody, encoding: String.Encoding.utf8) {
-				print("** REQUEST Params: \(paramsString)")
-			}
-			
-			switch response.result {
-			case .success(let json):
-				print("** RESPONSE: # --> #\(json))# #")
-			case .failure(let error):
-				print("** ERROR LOGGING RESPONSE: \(error.localizedDescription)")
-			}
-		}
 	}
 }

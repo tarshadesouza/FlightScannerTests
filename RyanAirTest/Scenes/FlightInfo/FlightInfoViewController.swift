@@ -13,9 +13,10 @@ import Foundation
 
 protocol FlightInfoViewProtocol: class {
 	func returnStations(viewModel: FlightInfo.Model.ViewModel)
+	func showError()
 }
 
-class FlightInfoViewController: UIViewController {
+class FlightInfoViewController: UIViewController, AttentionView {
 	
 	@IBOutlet var steppers: [UIStepper]! {
 		didSet {
@@ -173,6 +174,10 @@ extension FlightInfoViewController {
 extension FlightInfoViewController: FlightInfoViewProtocol {
 	func returnStations(viewModel: FlightInfo.Model.ViewModel) {
 		stations = viewModel.stations
+	}
+	
+	func showError() {
+		presentErrorAlert(message: "We couldnt find any stations 😬")
 	}
 }
 

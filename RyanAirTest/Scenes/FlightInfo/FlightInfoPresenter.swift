@@ -12,6 +12,7 @@ import UIKit
 
 protocol FlightInfoPresenterProtocol {
     func returnStations(response: FlightInfo.Model.Response)
+	func didFailToGetStations()
 }
 
 class FlightInfoPresenter: FlightInfoPresenterProtocol {
@@ -26,4 +27,8 @@ class FlightInfoPresenter: FlightInfoPresenterProtocol {
 		let viewModel = FlightInfo.Model.ViewModel(stations: response.stationsObject?.stations)
 		view?.returnStations(viewModel: viewModel)
     }
+	
+	func didFailToGetStations() {
+		
+	}
 }
