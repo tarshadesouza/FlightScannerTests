@@ -9,7 +9,7 @@
 //  see http://clean-swift.com
 //
 
-@testable import <MODULE_NAME>
+@testable import RyanAirTest
 
 class FlightDetailPresenterMock: FlightDetailPresenterProtocol {
 	
