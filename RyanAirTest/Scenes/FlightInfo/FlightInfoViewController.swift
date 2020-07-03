@@ -115,8 +115,9 @@ class FlightInfoViewController: UIViewController {
 	
 	@objc private func dateChanged(datePicker: UIDatePicker) {
 		let formatter = DateFormatter()
-		formatter.dateFormat = "dd/MM/yyyy"
-		outgoingTxtFld.text = formatter.string(from: datePicker.date)
+		formatter.dateFormat = "yyyy/MM/dd"
+		let dateString = formatter.string(from: datePicker.date)
+		outgoingTxtFld.text = dateString.replacingOccurrences(of: "/", with: "-")
 		view.endEditing(true)
 	}
 		
@@ -151,12 +152,12 @@ class FlightInfoViewController: UIViewController {
 	}
 	
 	@IBAction func didTapSearchBtn(_ sender: UIButton) {
-		let flightRequest = FlightRequest(origin: originButton.titleLabel?.text,
-										  destination: destinationButton.titleLabel?.text,
-										  dateOut: outgoingTxtFld.text,
-										  adults: adultsCounterLbl.text,
-										  teenagers: teenagersCounterLbl.text,
-										  children: childrenCounterLbl.text)
+		let flightRequest = FlightRequest(origin: originButton.titleLabel?.text ?? "",
+										  destination: destinationButton.titleLabel?.text ?? "",
+										  dateOut: outgoingTxtFld.text ?? "",
+										  adults: adultsCounterLbl.text ?? "",
+										  teenagers: teenagersCounterLbl.text ?? "",
+										  children: childrenCounterLbl.text ?? "")
 		routeToFlightDetail(with: flightRequest)
 	}
 }

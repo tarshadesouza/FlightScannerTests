@@ -23,7 +23,7 @@ enum FlightDetail {
 		}
 		
 		struct ViewModel {
-			var flights: [Flights]?
+			var flights: [FlightViewObject]?
 		}
 	}
 }

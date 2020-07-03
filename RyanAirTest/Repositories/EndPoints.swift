@@ -32,7 +32,7 @@ extension RyanAirEndPoints {
 			return "https://tripstest.ryanair.com/"
 			
 		case .retrieveFlights:
-			return "https://tripstest.ryanair.com/api/Availability"
+			return "https://tripstest.ryanair.com/"
 		}
 	}
 	
@@ -41,7 +41,7 @@ extension RyanAirEndPoints {
 		case .retrieveStations:
 			return "static/stations.json"
 		case .retrieveFlights:
-			return nil
+			return "api/v4/Availability"
 		}
 	}
 	
@@ -50,12 +50,12 @@ extension RyanAirEndPoints {
 		case .retrieveStations:
 			return nil
 		case .retrieveFlights(let query):
-			let params = ["origin": query.origin,
-						  "destination": query.destination,
-						  "dateout": query.dateOut,
-						  "adt": query.adults,
-						  "teen": query.teenagers,
-						  "chd": query.children]
+			let params = ["origin": query.origin ?? "",
+						  "destination": query.destination ?? "",
+						  "dateout": query.dateOut ?? "",
+						  "adt": query.adults ?? "",
+						  "teen": query.teenagers ?? "",
+						  "chd": query.children ?? ""]
 			return params
 		}
 	}

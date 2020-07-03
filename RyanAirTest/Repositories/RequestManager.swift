@@ -22,15 +22,4 @@ public class RequestManager {
 		}
 		return client.request(request)
 	}
-	
-	//	public func request<Parameters: Encodable>(_ path: String,
-	//											  method: HTTPMethod = .get,
-	//											  parameters: Parameters? = nil,
-	//											  encoding: ParameterEncoding = URLEncoding.default,
-	//											  headers: HTTPHeaders? = nil,
-	//											  encoder: ParameterEncoder = URLEncodedFormParameterEncoder.default,
-	//											  interceptor: RequestInterceptor? = nil) -> DataRequest {
-	//		let url = baseURL.appendingPathComponent(path)
-	//		return client.request(url, method: method, parameters: parameters, encoder: encoder, headers: headers, interceptor: interceptor)
-	//	}
 }

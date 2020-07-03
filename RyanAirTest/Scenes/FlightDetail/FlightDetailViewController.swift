@@ -11,14 +11,17 @@
 import UIKit
 
 protocol FlightDetailViewProtocol: class {
-	func displaySomething(viewModel: FlightDetail.Model.ViewModel)
+	func displayFlights(viewModel: FlightDetail.Model.ViewModel)
 }
 
 class FlightDetailViewController: UIViewController {
 		
+	@IBOutlet weak var tableView: UITableView!
+	
 	var router: FlightDetailRouterProtocol?
 	private var interactor: FlightDetailInteractorProtocol?
 	var request: FlightDetail.Model.Request?
+	var flights: [FlightViewObject]?
 	
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
 		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -32,6 +35,7 @@ class FlightDetailViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		configTableView()
 		getFlights()
 	}
 	
@@ -39,6 +43,12 @@ class FlightDetailViewController: UIViewController {
 		let presenter = FlightDetailPresenter(view: self)
 		interactor = FlightDetailInteractor(presenter: presenter)
 		router = FlightDetailRouter(view: self, dataStore: interactor)
+	}
+	
+	private func configTableView() {
+		tableView.register(UINib(nibName: "FlightDetailTableViewCell", bundle: nil), forCellReuseIdentifier: FlightDetailTableViewCell.defaultReuseIdentifier)
+		tableView.delegate = self
+		tableView.dataSource = self
 	}
 }
 
@@ -51,7 +61,6 @@ extension FlightDetailViewController {
 
 //Interaction
 extension FlightDetailViewController {
-	
 	func getFlights() {
 		guard let request = request else {
 			return
@@ -62,7 +71,8 @@ extension FlightDetailViewController {
 
 //Presentation
 extension FlightDetailViewController: FlightDetailViewProtocol {
-	func displaySomething(viewModel: FlightDetail.Model.ViewModel) {
-		//nameTextField.text = viewModel.name
+	func displayFlights(viewModel: FlightDetail.Model.ViewModel) {
+		flights = viewModel.flights
+		tableView.reloadData()
 	}
 }

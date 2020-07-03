@@ -23,13 +23,43 @@ class FlightDetailPresenter: FlightDetailPresenterProtocol {
 	}
 	
 	func returnFlights(response: FlightDetail.Model.Response) {
-		let dates = response.trips?.dates
-		dates?.forEach({ (test) in
-			test.dateOut
-			test.flights
-			let viewModel = FlightDetail.Model.ViewModel(flights: test.flights)
-		})
-//		let viewModel = FlightDetail.Model.ViewModel(flights: <#[Flights]#>)
-//		view?.displaySomething(viewModel: viewModel)
+		let trips = response.trips?.trips
+		
+		let obj = trips.map { createFlightObjects(trips: $0) }
+		let viewModel = FlightDetail.Model.ViewModel(flights: obj)
+		view?.displayFlights(viewModel: viewModel)
 	}
+	
+	private func createFlightObjects(trips: [Trip]) -> [FlightViewObject] {
+		var dates = [Dates]()
+		var flights = [Flights]()
+		var fares = [Fare]()
+		
+		var dateOut = ""
+		var flightNo = [String]()
+		var fareAmount = [Double]()
+		
+		var totalFoundFlights = [FlightViewObject]()
+		
+		trips.forEach { trip in
+			dates = trip.dates
+			
+			dates.forEach { date in
+				flights = date.flights
+				dateOut = date.dateOut
+				
+				flights.forEach { flight in
+					flightNo.append(flight.flightNumber)
+					fares = flight.regularFare.fares
+					
+					fares.forEach { fare in
+						fareAmount.append(fare.amount)
+					}
+				}
+			}
+			totalFoundFlights.append(FlightViewObject(dateOut: dateOut, fareAmount: fareAmount, flightNumber: flightNo))
+		}
+		return totalFoundFlights
+	}
+	
 }

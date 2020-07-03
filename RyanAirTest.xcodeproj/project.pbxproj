@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		5960A80B5E023FB37FBD2F28 /* Pods_RyanAirTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFD1C4FF7C54F26A308B6C1 /* Pods_RyanAirTest.framework */; };
+		C109228324AF12EC0006E3A9 /* Fare.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109228224AF12EC0006E3A9 /* Fare.swift */; };
+		C109228524AF133C0006E3A9 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109228424AF133C0006E3A9 /* Trip.swift */; };
+		C109228824AF13650006E3A9 /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109228724AF13650006E3A9 /* Dates.swift */; };
+		C109243624AF2C090006E3A9 /* FlightDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109243424AF2C090006E3A9 /* FlightDetailTableViewCell.swift */; };
+		C109243724AF2C090006E3A9 /* FlightDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C109243524AF2C090006E3A9 /* FlightDetailTableViewCell.xib */; };
+		C109243924AF2ECD0006E3A9 /* FlightDetailViewController+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109243824AF2ECD0006E3A9 /* FlightDetailViewController+Delegates.swift */; };
+		C109296424AF71150006E3A9 /* FlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109296324AF71150006E3A9 /* FlightView.swift */; };
+		C109296624AF71240006E3A9 /* FlightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C109296524AF71240006E3A9 /* FlightView.xib */; };
+		C109296824AF714D0006E3A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109296724AF714D0006E3A9 /* ContentView.swift */; };
+		C109296A24AF90430006E3A9 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109296924AF90430006E3A9 /* UIStackView+Extensions.swift */; };
 		C19431D924ADE9110033A3B2 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19431D824ADE9110033A3B2 /* RequestManager.swift */; };
 		C19431DC24AE03500033A3B2 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19431DA24AE03500033A3B2 /* StationTableViewCell.swift */; };
 		C19431DD24AE03500033A3B2 /* StationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19431DB24AE03500033A3B2 /* StationTableViewCell.xib */; };
@@ -60,6 +70,16 @@
 /* Begin PBXFileReference section */
 		3E72E6EBE7C02F2513B2EBCC /* Pods-RyanAirTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirTest.debug.xcconfig"; path = "Target Support Files/Pods-RyanAirTest/Pods-RyanAirTest.debug.xcconfig"; sourceTree = "<group>"; };
 		B935F5531950F32CA85AA172 /* Pods-RyanAirTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirTest.release.xcconfig"; path = "Target Support Files/Pods-RyanAirTest/Pods-RyanAirTest.release.xcconfig"; sourceTree = "<group>"; };
+		C109228224AF12EC0006E3A9 /* Fare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fare.swift; sourceTree = "<group>"; };
+		C109228424AF133C0006E3A9 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		C109228724AF13650006E3A9 /* Dates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dates.swift; sourceTree = "<group>"; };
+		C109243424AF2C090006E3A9 /* FlightDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailTableViewCell.swift; sourceTree = "<group>"; };
+		C109243524AF2C090006E3A9 /* FlightDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlightDetailTableViewCell.xib; sourceTree = "<group>"; };
+		C109243824AF2ECD0006E3A9 /* FlightDetailViewController+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightDetailViewController+Delegates.swift"; sourceTree = "<group>"; };
+		C109296324AF71150006E3A9 /* FlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightView.swift; sourceTree = "<group>"; };
+		C109296524AF71240006E3A9 /* FlightView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlightView.xib; sourceTree = "<group>"; };
+		C109296724AF714D0006E3A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C109296924AF90430006E3A9 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
 		C19431D824ADE9110033A3B2 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		C19431DA24AE03500033A3B2 /* StationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
 		C19431DB24AE03500033A3B2 /* StationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationTableViewCell.xib; sourceTree = "<group>"; };
@@ -140,9 +160,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C109228624AF13500006E3A9 /* FlightModels */ = {
+			isa = PBXGroup;
+			children = (
+				C109228424AF133C0006E3A9 /* Trip.swift */,
+				C109228224AF12EC0006E3A9 /* Fare.swift */,
+				C1A5FE6C24AE59D900E05E3B /* Flight.swift */,
+				C109228724AF13650006E3A9 /* Dates.swift */,
+			);
+			path = FlightModels;
+			sourceTree = "<group>";
+		};
+		C109243324AF2BF10006E3A9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C109243424AF2C090006E3A9 /* FlightDetailTableViewCell.swift */,
+				C109243524AF2C090006E3A9 /* FlightDetailTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C109243A24AF2EDA0006E3A9 /* ControllerDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				C109243824AF2ECD0006E3A9 /* FlightDetailViewController+Delegates.swift */,
+			);
+			path = ControllerDelegates;
+			sourceTree = "<group>";
+		};
 		C1A5FE7824AE64C300E05E3B /* FlightDetail */ = {
 			isa = PBXGroup;
 			children = (
+				C109243A24AF2EDA0006E3A9 /* ControllerDelegates */,
 				C1A5FE7924AE6BD600E05E3B /* Views */,
 				C1A5FE7024AE64BD00E05E3B /* FlightDetailViewController.swift */,
 				C1A5FE7124AE64BD00E05E3B /* FlightDetailInteractor.swift */,
@@ -157,7 +206,11 @@
 		C1A5FE7924AE6BD600E05E3B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C109243324AF2BF10006E3A9 /* Cells */,
 				C1A5FE7A24AE6BEE00E05E3B /* FlightDetailViewController.xib */,
+				C109296324AF71150006E3A9 /* FlightView.swift */,
+				C109296524AF71240006E3A9 /* FlightView.xib */,
+				C109296724AF714D0006E3A9 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -229,6 +282,7 @@
 				C19431DE24AE04A30033A3B2 /* UITableView+Extensions.swift */,
 				C1A5FCBC24AE333900E05E3B /* UIViewController+Extensions.swift */,
 				C1A5FCBE24AE3BA800E05E3B /* Number+Extensions.swift */,
+				C109296924AF90430006E3A9 /* UIStackView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -236,9 +290,9 @@
 		C1B5FBED24ACF00800028C03 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C109228624AF13500006E3A9 /* FlightModels */,
 				C1B5FC1324AD0A6400028C03 /* Data */,
 				C1B5FC1624AD0A9D00028C03 /* Station.swift */,
-				C1A5FE6C24AE59D900E05E3B /* Flight.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -397,10 +451,12 @@
 				C1B5FC0124ACF69400028C03 /* FlightInfoViewController.xib in Resources */,
 				C1B5FBFC24ACF5E100028C03 /* Test Template in Resources */,
 				C1B5FBCD24ACE14500028C03 /* Assets.xcassets in Resources */,
+				C109296624AF71240006E3A9 /* FlightView.xib in Resources */,
 				C19431DD24AE03500033A3B2 /* StationTableViewCell.xib in Resources */,
 				C1B5FC0824ACFB7C00028C03 /* GlobileActionSheetController.xib in Resources */,
 				C1B5FBCB24ACE14400028C03 /* Main.storyboard in Resources */,
 				C1A5FE7B24AE6BEE00E05E3B /* FlightDetailViewController.xib in Resources */,
+				C109243724AF2C090006E3A9 /* FlightDetailTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C109228524AF133C0006E3A9 /* Trip.swift in Sources */,
 				C1A5FE7724AE64BD00E05E3B /* FlightDetailModel.swift in Sources */,
 				C1B5FC0624ACFB6F00028C03 /* GlobileActionSheetController.swift in Sources */,
 				C1B5FBC824ACE14400028C03 /* ViewController.swift in Sources */,
@@ -485,21 +542,28 @@
 				C1B5FBC424ACE14400028C03 /* AppDelegate.swift in Sources */,
 				C1B5FBF924ACF5E100028C03 /* FlightInfoRouter.swift in Sources */,
 				C1B5FC1924AD0EFC00028C03 /* StationsRepository.swift in Sources */,
+				C109296A24AF90430006E3A9 /* UIStackView+Extensions.swift in Sources */,
 				C1A5FE7324AE64BD00E05E3B /* FlightDetailPresenter.swift in Sources */,
 				C1A5FE7424AE64BD00E05E3B /* FlightDetailRouter.swift in Sources */,
+				C109228824AF13650006E3A9 /* Dates.swift in Sources */,
 				C1B5FC0C24AD056200028C03 /* SearchInfoView.swift in Sources */,
+				C109243924AF2ECD0006E3A9 /* FlightDetailViewController+Delegates.swift in Sources */,
 				C1B5FBE724ACE47D00028C03 /* BaseRepository.swift in Sources */,
+				C109243624AF2C090006E3A9 /* FlightDetailTableViewCell.swift in Sources */,
+				C109296824AF714D0006E3A9 /* ContentView.swift in Sources */,
 				C1B5FBFB24ACF5E100028C03 /* FlightInfoInteractor.swift in Sources */,
 				C1B5FBFA24ACF5E100028C03 /* FlightInfoViewController.swift in Sources */,
 				C1B5FC1724AD0A9D00028C03 /* Station.swift in Sources */,
 				C1A5FE7524AE64BD00E05E3B /* FlightDetailViewController.swift in Sources */,
 				C1A5FCBD24AE333900E05E3B /* UIViewController+Extensions.swift in Sources */,
 				C1A5FE6D24AE59D900E05E3B /* Flight.swift in Sources */,
+				C109228324AF12EC0006E3A9 /* Fare.swift in Sources */,
 				C1B5FBC624ACE14400028C03 /* SceneDelegate.swift in Sources */,
 				C1B5FBF824ACF5E100028C03 /* FlightInfoPresenter.swift in Sources */,
 				C19431DC24AE03500033A3B2 /* StationTableViewCell.swift in Sources */,
 				C19431DF24AE04A30033A3B2 /* UITableView+Extensions.swift in Sources */,
 				C19431D924ADE9110033A3B2 /* RequestManager.swift in Sources */,
+				C109296424AF71150006E3A9 /* FlightView.swift in Sources */,
 				C1B5FBEF24ACF01800028C03 /* FlightRequest.swift in Sources */,
 				C1A5FE6B24AE591B00E05E3B /* FlightsRepository.swift in Sources */,
 				C1A5FCBF24AE3BA800E05E3B /* Number+Extensions.swift in Sources */,
