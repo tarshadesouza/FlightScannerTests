@@ -13,3 +13,9 @@ extension String {
         return URL(fileURLWithPath: self).deletingPathExtension().lastPathComponent
     }
 }
+
+public func safeprint(_ entry: Any) {
+	#if DEBUG
+	print("DEBUG: \(Date()) ** \(entry)")
+	#endif
+}

@@ -1,0 +1,419 @@
+{
+    "termsOfUse": "https://www.ryanair.com/ie/en/corporate/terms-of-use=AGREED",
+    "currency": "EUR",
+    "currPrecision": 2,
+    "routeGroup": "UKP",
+    "tripType": "OTHER",
+    "upgradeType": "PLUS",
+    "trips": [
+        {
+            "origin": "DUB",
+            "originName": "Dublin ",
+            "destination": "STN",
+            "destinationName": "London (Stansted)",
+            "routeGroup": "UKP",
+            "tripType": "OTHER",
+            "upgradeType": "PLUS",
+            "dates": [
+                {
+                    "dateOut": "2020-09-03T00:00:00.000",
+                    "flights": [
+                        {
+                            "faresLeft": -1,
+                            "flightKey": "FR~ 202~ ~~DUB~09/03/2020 06:25~STN~09/03/2020 07:50~~",
+                            "infantsLeft": 17,
+                            "regularFare": {
+                                "fareKey": "KL2X4TDJOYWLNREVWVFXGVG54ITCNXA2O6FIZXXSJ3VYJRF5J72T3YXAKWHVA5EXJRWJJPMMVUYQBMKNE6Z24WVJAY3PD75J5ULZD4VLBBS7QDM4BL6CVIIAJUWS2PPPSJ4DSVUCZT33ZGQJUY253C5A73D4XH3Y2M4CC73APJARRRHBER6K5VWT5ETMODOHMBP3VKOFB5ES2",
+                                "fareClass": "S",
+                                "fares": [
+                                    {
+                                        "type": "ADT",
+                                        "amount": 272.980000000,
+                                        "count": 1,
+                                        "hasDiscount": true,
+                                        "publishedFare": 278.22,
+                                        "discountInPercent": 0,
+                                        "hasPromoDiscount": false,
+                                        "discountAmount": 5.240000000
+                                    }
+                                ]
+                            },
+                            "operatedBy": "",
+                            "segments": [
+                                {
+                                    "segmentNr": 0,
+                                    "origin": "DUB",
+                                    "destination": "STN",
+                                    "flightNumber": "FR 202",
+                                    "time": [
+                                        "2020-09-03T06:25:00.000",
+                                        "2020-09-03T07:50:00.000"
+                                    ],
+                                    "timeUTC": [
+                                        "2020-09-03T05:25:00.000Z",
+                                        "2020-09-03T06:50:00.000Z"
+                                    ],
+                                    "duration": "01:25"
+                                }
+                            ],
+                            "flightNumber": "FR 202",
+                            "time": [
+                                "2020-09-03T06:25:00.000",
+                                "2020-09-03T07:50:00.000"
+                            ],
+                            "timeUTC": [
+                                "2020-09-03T05:25:00.000Z",
+                                "2020-09-03T06:50:00.000Z"
+                            ],
+                            "duration": "01:25"
+                        },
+                        {
+                            "faresLeft": -1,
+                            "flightKey": "FR~ 206~ ~~DUB~09/03/2020 08:00~STN~09/03/2020 09:20~~",
+                            "infantsLeft": 18,
+                            "regularFare": {
+                                "fareKey": "KL2X4TDJOYWLNREVWVFXGVG54ITCNXA2O6FIZXXSJ3VYJRF5J725KPJUOT5IK4YXJ26FRRSVTG3WZC4LRDDXOBSGOXVN2CROWINQR6PNKFUTBJ2A3G4SU4FTTEWJHGGA5M27R3DDPPGYEIQHHRFLMJW5PUJDVMJRVGB2XB4RUIFI4XDSKDRQN4EZ5Z6BWYZ6E5K5JZP5FY7O2",
+                                "fareClass": "S",
+                                "fares": [
+                                    {
+                                        "type": "ADT",
+                                        "amount": 272.980000000,
+                                        "count": 1,
+                                        "hasDiscount": true,
+                                        "publishedFare": 278.22,
+                                        "discountInPercent": 0,
+                                        "hasPromoDiscount": false,
+                                        "discountAmount": 5.240000000
+                                    }
+                                ]
+                            },
+                            "operatedBy": "",
+                            "segments": [
+                                {
+                                    "segmentNr": 0,
+                                    "origin": "DUB",
+                                    "destination": "STN",
+                                    "flightNumber": "FR 206",
+                                    "time": [
+                                        "2020-09-03T08:00:00.000",
+                                        "2020-09-03T09:20:00.000"
+                                    ],
+                                    "timeUTC": [
+                                        "2020-09-03T07:00:00.000Z",
+                                        "2020-09-03T08:20:00.000Z"
+                                    ],
+                                    "duration": "01:20"
+                                }
+                            ],
+                            "flightNumber": "FR 206",
+                            "time": [
+                                "2020-09-03T08:00:00.000",
+                                "2020-09-03T09:20:00.000"
+                            ],
+                            "timeUTC": [
+                                "2020-09-03T07:00:00.000Z",
+                                "2020-09-03T08:20:00.000Z"
+                            ],
+                            "duration": "01:20"
+                        },
+                        {
+                            "faresLeft": -1,
+                            "flightKey": "FR~2272~ ~~DUB~09/03/2020 11:55~STN~09/03/2020 13:15~~",
+                            "infantsLeft": 18,
+                            "regularFare": {
+                                "fareKey": "KL2X4TDJOYWLNREVWVFXGVG54ITCNXA2O6FIZXXSJ3VYJRF5J72Y3MN42PW6JPB43VNXCRSJJJ4FSTXIKYJMMZ4XV2P4T3PT5AEDNYNHGPTVVGU6PTFO2LEVVH5XMQ4EOFZSCTM6TOEYJYA5DPQAI4K3BH6Q6KWQC43QVRTGLTJSHS2IUJDP7TBNR2WDRQHLQTEBFNZ6KGHVC",
+                                "fareClass": "S",
+                                "fares": [
+                                    {
+                                        "type": "ADT",
+                                        "amount": 272.980000000,
+                                        "count": 1,
+                                        "hasDiscount": true,
+                                        "publishedFare": 278.22,
+                                        "discountInPercent": 0,
+                                        "hasPromoDiscount": false,
+                                        "discountAmount": 5.240000000
+                                    }
+                                ]
+                            },
+                            "operatedBy": "",
+                            "segments": [
+                                {
+                                    "segmentNr": 0,
+                                    "origin": "DUB",
+                                    "destination": "STN",
+                                    "flightNumber": "FR 2272",
+                                    "time": [
+                                        "2020-09-03T11:55:00.000",
+                                        "2020-09-03T13:15:00.000"
+                                    ],
+                                    "timeUTC": [
+                                        "2020-09-03T10:55:00.000Z",
+                                        "2020-09-03T12:15:00.000Z"
+                                    ],
+                                    "duration": "01:20"
+                                }
+                            ],
+                            "flightNumber": "FR 2272",
+                            "time": [
+                                "2020-09-03T11:55:00.000",
+                                "2020-09-03T13:15:00.000"
+                            ],
+                            "timeUTC": [
+                                "2020-09-03T10:55:00.000Z",
+                                "2020-09-03T12:15:00.000Z"
+                            ],
+                            "duration": "01:20"
+                        },
+                        {
+                            "faresLeft": -1,
+                            "flightKey": "FR~ 294~ ~~DUB~09/03/2020 15:30~STN~09/03/2020 16:50~~",
+                            "infantsLeft": 18,
+                            "regularFare": {
+                                "fareKey": "KL2X4TDJOYWLNREVWVFXGVG54ITCNXA2O6FIZXXSJ3VYJRF5J727YIDSWSXKGEUCXWEMX46BVCVNUN2TCLP7UCLKQDFHBVASBKCO2WEXKHUO3KZ5S7IG2HFAMQV67DQS5QQO65NHQXIQ7AZETPRGDGROF2RXHJD6Q5OXAJTDWZV5OFS3DIGZPNPTSZ55DQFRT3HZDWDEQUEOG",
+                                "fareClass": "S",
+                                "fares": [
+                                    {
+                                        "type": "ADT",
+                                        "amount": 272.980000000,
+                                        "count": 1,
+                                        "hasDiscount": true,
+                                        "publishedFare": 278.22,
+                                        "discountInPercent": 0,
+                                        "hasPromoDiscount": false,
+                                        "discountAmount": 5.240000000
+                                    }
+                                ]
+                            },
+                            "operatedBy": "",
+                            "segments": [
+                                {
+                                    "segmentNr": 0,
+                                    "origin": "DUB",
+                                    "destination": "STN",
+                                    "flightNumber": "FR 294",
+                                    "time": [
+                                        "2020-09-03T15:30:00.000",
+                                        "2020-09-03T16:50:00.000"
+                                    ],
+                                    "timeUTC": [
+                                        "2020-09-03T14:30:00.000Z",
+                                        "2020-09-03T15:50:00.000Z"
+                                    ],
+                                    "duration": "01:20"
+                                }
+                            ],
+                            "flightNumber": "FR 294",
+                            "time": [
+                                "2020-09-03T15:30:00.000",
+                                "2020-09-03T16:50:00.000"
+                            ],
+                            "timeUTC": [
+                                "2020-09-03T14:30:00.000Z",
+                                "2020-09-03T15:50:00.000Z"
+                            ],
+                            "duration": "01:20"
+                        },
+                        {
+                            "faresLeft": -1,
+                            "flightKey": "FR~ 211~ ~~DUB~09/03/2020 16:30~STN~09/03/2020 17:50~~",
+                            "infantsLeft": 18,
+                            "regularFare": {
+                                "fareKey": "KL2X4TDJOYWLNREVWVFXGVG54ITCNXA2O6FIZXXSJ3VYJRF5J72SWK23ACVLKD6BOFOWLZIZCK4G46YUWXGNMFMIDAO2YNDVEZLCMHG2ZHUQEGXPDNFNXNMBM5DYH2IPTB6OFE6QUEE5AMJFPALFOX4O7IMFAFEHJMWEJ3EBHLJHCPBFP3UKL5GFB74FZXKMXN4BGNJB3OXCI",
+                                "fareClass": "S",
+                                "fares": [
+                                    {
+                                        "type": "ADT",
+                                        "amount": 272.980000000,
+                                        "count": 1,
+                                        "hasDiscount": true,
+                                        "publishedFare": 278.22,
+                                        "discountInPercent": 0,
+                                        "hasPromoDiscount": false,
+                                        "discountAmount": 5.240000000
+                                    }
+                                ]
+                            },
+                            "operatedBy": "",
+                            "segments": [
+                                {
+                                    "segmentNr": 0,
+                                    "origin": "DUB",
+                                    "destination": "STN",
+                                    "flightNumber": "FR 211",
+                                    "time": [
+                                        "2020-09-03T16:30:00.000",
+                                        "2020-09-03T17:50:00.000"
+                                    ],
+                                    "timeUTC": [
+                                        "2020-09-03T15:30:00.000Z",
+                                        "2020-09-03T16:50:00.000Z"
+                                    ],
+                                    "duration": "01:20"
+                                }
+                            ],
+                            "flightNumber": "FR 211",
+                            "time": [
+                                "2020-09-03T16:30:00.000",
+                                "2020-09-03T17:50:00.000"
+                            ],
+                            "timeUTC": [
+                                "2020-09-03T15:30:00.000Z",
+                                "2020-09-03T16:50:00.000Z"
+                            ],
+                            "duration": "01:20"
+                        },
+                        {
+                            "faresLeft": -1,
+                            "flightKey": "FR~ 288~ ~~DUB~09/03/2020 18:55~STN~09/03/2020 20:15~~",
+                            "infantsLeft": 18,
+                            "regularFare": {
+                                "fareKey": "KL2X4TDJOYWLNREVWVFXGVG54ITCNXA2O6FIZXXSJ3VYJRF5J72YWHOQYKTBSURYRCANB42YBEBTYWOEM5EPIJQCVATIK4JALTYYZ23E4IW5GJ4JOAIDJE2S4Y73K6JYIY5OWPKLWSERYRUYLET34PUMGS2CRXARF274UVLSEFPAMKQ4TLXTYBCFI6F3MM6T4U3GYZMNFU2WG",
+                                "fareClass": "S",
+                                "fares": [
+                                    {
+                                        "type": "ADT",
+                                        "amount": 272.980000000,
+                                        "count": 1,
+                                        "hasDiscount": true,
+                                        "publishedFare": 278.22,
+                                        "discountInPercent": 0,
+                                        "hasPromoDiscount": false,
+                                        "discountAmount": 5.240000000
+                                    }
+                                ]
+                            },
+                            "operatedBy": "",
+                            "segments": [
+                                {
+                                    "segmentNr": 0,
+                                    "origin": "DUB",
+                                    "destination": "STN",
+                                    "flightNumber": "FR 288",
+                                    "time": [
+                                        "2020-09-03T18:55:00.000",
+                                        "2020-09-03T20:15:00.000"
+                                    ],
+                                    "timeUTC": [
+                                        "2020-09-03T17:55:00.000Z",
+                                        "2020-09-03T19:15:00.000Z"
+                                    ],
+                                    "duration": "01:20"
+                                }
+                            ],
+                            "flightNumber": "FR 288",
+                            "time": [
+                                "2020-09-03T18:55:00.000",
+                                "2020-09-03T20:15:00.000"
+                            ],
+                            "timeUTC": [
+                                "2020-09-03T17:55:00.000Z",
+                                "2020-09-03T19:15:00.000Z"
+                            ],
+                            "duration": "01:20"
+                        },
+                        {
+                            "faresLeft": -1,
+                            "flightKey": "FR~ 272~ ~~DUB~09/03/2020 20:20~STN~09/03/2020 21:40~~",
+                            "infantsLeft": 18,
+                            "regularFare": {
+                                "fareKey": "KL2X4TDJOYWLNREVWVFXGVG54ITCNXA2O6FIZXXSJ3VYJRF5J72UAV34QVQVWLZNRCYCW4GSORTMP3MQZR6R5ITKTWER7WUHPO7HZ2EGF23VBNJODI7DQ47562IJELR4WBD72DPCQKB7PEDDQLXAN2S5ZYNKA54U4DSPA4GFFYJTEKZ7CDY5MO66P3EHIAAOMQABPUX6QPZYA",
+                                "fareClass": "S",
+                                "fares": [
+                                    {
+                                        "type": "ADT",
+                                        "amount": 272.980000000,
+                                        "count": 1,
+                                        "hasDiscount": true,
+                                        "publishedFare": 278.22,
+                                        "discountInPercent": 0,
+                                        "hasPromoDiscount": false,
+                                        "discountAmount": 5.240000000
+                                    }
+                                ]
+                            },
+                            "operatedBy": "",
+                            "segments": [
+                                {
+                                    "segmentNr": 0,
+                                    "origin": "DUB",
+                                    "destination": "STN",
+                                    "flightNumber": "FR 272",
+                                    "time": [
+                                        "2020-09-03T20:20:00.000",
+                                        "2020-09-03T21:40:00.000"
+                                    ],
+                                    "timeUTC": [
+                                        "2020-09-03T19:20:00.000Z",
+                                        "2020-09-03T20:40:00.000Z"
+                                    ],
+                                    "duration": "01:20"
+                                }
+                            ],
+                            "flightNumber": "FR 272",
+                            "time": [
+                                "2020-09-03T20:20:00.000",
+                                "2020-09-03T21:40:00.000"
+                            ],
+                            "timeUTC": [
+                                "2020-09-03T19:20:00.000Z",
+                                "2020-09-03T20:40:00.000Z"
+                            ],
+                            "duration": "01:20"
+                        },
+                        {
+                            "faresLeft": -1,
+                            "flightKey": "FR~ 298~ ~~DUB~09/03/2020 22:05~STN~09/03/2020 23:25~~",
+                            "infantsLeft": 18,
+                            "regularFare": {
+                                "fareKey": "KL2X4TDJOYWLNREVWVFXGVG54ITCNXA2O6FIZXXSJ3VYJRF5J723VV6OXFNGUROS6KBZU2DW6G4BCTRLR4SOYY3H5NTSNDJBV437YEOHFEVE4JSBPFAWKVOBAM327MSJ7YRZPY42OL5O7SVF2ASHNL7CJA5AFRDEIUIFKQZWVLVGFF7YJ5YWWZTRUYHYLJQDTZYJ5VGDNK426",
+                                "fareClass": "S",
+                                "fares": [
+                                    {
+                                        "type": "ADT",
+                                        "amount": 272.980000000,
+                                        "count": 1,
+                                        "hasDiscount": true,
+                                        "publishedFare": 278.22,
+                                        "discountInPercent": 0,
+                                        "hasPromoDiscount": false,
+                                        "discountAmount": 5.240000000
+                                    }
+                                ]
+                            },
+                            "operatedBy": "",
+                            "segments": [
+                                {
+                                    "segmentNr": 0,
+                                    "origin": "DUB",
+                                    "destination": "STN",
+                                    "flightNumber": "FR 298",
+                                    "time": [
+                                        "2020-09-03T22:05:00.000",
+                                        "2020-09-03T23:25:00.000"
+                                    ],
+                                    "timeUTC": [
+                                        "2020-09-03T21:05:00.000Z",
+                                        "2020-09-03T22:25:00.000Z"
+                                    ],
+                                    "duration": "01:20"
+                                }
+                            ],
+                            "flightNumber": "FR 298",
+                            "time": [
+                                "2020-09-03T22:05:00.000",
+                                "2020-09-03T23:25:00.000"
+                            ],
+                            "timeUTC": [
+                                "2020-09-03T21:05:00.000Z",
+                                "2020-09-03T22:25:00.000Z"
+                            ],
+                            "duration": "01:20"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "serverTimeUTC": "2020-07-03T07:06:08.907Z"
+}

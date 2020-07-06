@@ -10,6 +10,9 @@ import Foundation
 import Alamofire
 
 class BaseRepository: NSObject {
-
-    
+	let manager: RequestManager
+	
+	internal init(manager: RequestManager = RequestManager()) {
+		self.manager = manager
+	}
 }
