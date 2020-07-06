@@ -29,6 +29,6 @@ class FlightInfoPresenter: FlightInfoPresenterProtocol {
     }
 	
 	func didFailToGetStations() {
-		
+		view?.showError()
 	}
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5960A80B5E023FB37FBD2F28 /* Pods_RyanAirTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFD1C4FF7C54F26A308B6C1 /* Pods_RyanAirTest.framework */; };
+		B89F5483727AB6B8BAAF9084 /* libPods-RyanAirTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB83B5BB793B1576ECEC23F /* libPods-RyanAirTestTests.a */; };
 		C109228324AF12EC0006E3A9 /* Fare.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109228224AF12EC0006E3A9 /* Fare.swift */; };
 		C109228524AF133C0006E3A9 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109228424AF133C0006E3A9 /* Trip.swift */; };
 		C109228824AF13650006E3A9 /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109228724AF13650006E3A9 /* Dates.swift */; };
@@ -51,7 +52,6 @@
 		C1B5FBCB24ACE14400028C03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B5FBC924ACE14400028C03 /* Main.storyboard */; };
 		C1B5FBCD24ACE14500028C03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B5FBCC24ACE14500028C03 /* Assets.xcassets */; };
 		C1B5FBD024ACE14500028C03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B5FBCE24ACE14500028C03 /* LaunchScreen.storyboard */; };
-		C1B5FBDB24ACE14500028C03 /* RyanAirTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBDA24ACE14500028C03 /* RyanAirTestTests.swift */; };
 		C1B5FBE724ACE47D00028C03 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBE624ACE47D00028C03 /* BaseRepository.swift */; };
 		C1B5FBE924ACE84C00028C03 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBE824ACE84C00028C03 /* EndPoints.swift */; };
 		C1B5FBEC24ACEAA900028C03 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBEB24ACEAA900028C03 /* String+Utils.swift */; };
@@ -60,7 +60,6 @@
 		C1B5FBF924ACF5E100028C03 /* FlightInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBF324ACF5E100028C03 /* FlightInfoRouter.swift */; };
 		C1B5FBFA24ACF5E100028C03 /* FlightInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBF424ACF5E100028C03 /* FlightInfoViewController.swift */; };
 		C1B5FBFB24ACF5E100028C03 /* FlightInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBF524ACF5E100028C03 /* FlightInfoInteractor.swift */; };
-		C1B5FBFC24ACF5E100028C03 /* Test Template in Resources */ = {isa = PBXBuildFile; fileRef = C1B5FBF624ACF5E100028C03 /* Test Template */; };
 		C1B5FBFD24ACF5E100028C03 /* FlightInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FBF724ACF5E100028C03 /* FlightInfoModel.swift */; };
 		C1B5FC0124ACF69400028C03 /* FlightInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1B5FC0024ACF69400028C03 /* FlightInfoViewController.xib */; };
 		C1B5FC0624ACFB6F00028C03 /* GlobileActionSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FC0524ACFB6F00028C03 /* GlobileActionSheetController.swift */; };
@@ -68,6 +67,12 @@
 		C1B5FC0C24AD056200028C03 /* SearchInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FC0B24AD056200028C03 /* SearchInfoView.swift */; };
 		C1B5FC1724AD0A9D00028C03 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FC1624AD0A9D00028C03 /* Station.swift */; };
 		C1B5FC1924AD0EFC00028C03 /* StationsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5FC1824AD0EFC00028C03 /* StationsRepository.swift */; };
+		C1BA66F724B329C70077E475 /* FlightInfoInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BA66F624B329C70077E475 /* FlightInfoInteractorTests.swift */; };
+		C1BA66FA24B331820077E475 /* FlightInfoPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BA66F924B331820077E475 /* FlightInfoPresenterTests.swift */; };
+		C1BA66FD24B338DF0077E475 /* FlightInfoViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BA66FC24B338DF0077E475 /* FlightInfoViewControllerMock.swift */; };
+		C1BA66FF24B3393D0077E475 /* FlightInfoRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BA66FE24B3393D0077E475 /* FlightInfoRouterMock.swift */; };
+		C1BA670124B33CC10077E475 /* FlightDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BA670024B33CC10077E475 /* FlightDetailPresenterTests.swift */; };
+		C1BA670824B33D8C0077E475 /* FlightDetailViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BA670724B33D8C0077E475 /* FlightDetailViewControllerMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +86,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0567EF5116A3498A12DD3441 /* Pods-RyanAirTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirTestTests.debug.xcconfig"; path = "Target Support Files/Pods-RyanAirTestTests/Pods-RyanAirTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3E72E6EBE7C02F2513B2EBCC /* Pods-RyanAirTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirTest.debug.xcconfig"; path = "Target Support Files/Pods-RyanAirTest/Pods-RyanAirTest.debug.xcconfig"; sourceTree = "<group>"; };
+		87CB2FACFB9769E077AD867C /* Pods-RyanAirTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirTestTests.release.xcconfig"; path = "Target Support Files/Pods-RyanAirTestTests/Pods-RyanAirTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		AAB83B5BB793B1576ECEC23F /* libPods-RyanAirTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RyanAirTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B935F5531950F32CA85AA172 /* Pods-RyanAirTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirTest.release.xcconfig"; path = "Target Support Files/Pods-RyanAirTest/Pods-RyanAirTest.release.xcconfig"; sourceTree = "<group>"; };
 		C109228224AF12EC0006E3A9 /* Fare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fare.swift; sourceTree = "<group>"; };
 		C109228424AF133C0006E3A9 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
@@ -129,7 +137,6 @@
 		C1B5FBCF24ACE14500028C03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1B5FBD124ACE14500028C03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1B5FBD624ACE14500028C03 /* RyanAirTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RyanAirTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1B5FBDA24ACE14500028C03 /* RyanAirTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanAirTestTests.swift; sourceTree = "<group>"; };
 		C1B5FBDC24ACE14500028C03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1B5FBE624ACE47D00028C03 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		C1B5FBE824ACE84C00028C03 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
@@ -139,7 +146,6 @@
 		C1B5FBF324ACF5E100028C03 /* FlightInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInfoRouter.swift; sourceTree = "<group>"; };
 		C1B5FBF424ACF5E100028C03 /* FlightInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInfoViewController.swift; sourceTree = "<group>"; };
 		C1B5FBF524ACF5E100028C03 /* FlightInfoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInfoInteractor.swift; sourceTree = "<group>"; };
-		C1B5FBF624ACF5E100028C03 /* Test Template */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Test Template"; sourceTree = "<group>"; };
 		C1B5FBF724ACF5E100028C03 /* FlightInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInfoModel.swift; sourceTree = "<group>"; };
 		C1B5FC0024ACF69400028C03 /* FlightInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlightInfoViewController.xib; sourceTree = "<group>"; };
 		C1B5FC0524ACFB6F00028C03 /* GlobileActionSheetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobileActionSheetController.swift; sourceTree = "<group>"; };
@@ -147,6 +153,14 @@
 		C1B5FC0B24AD056200028C03 /* SearchInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInfoView.swift; sourceTree = "<group>"; };
 		C1B5FC1624AD0A9D00028C03 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		C1B5FC1824AD0EFC00028C03 /* StationsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsRepository.swift; sourceTree = "<group>"; };
+		C1BA661E24B3154E0077E475 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1BA662024B315F30077E475 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1BA66F624B329C70077E475 /* FlightInfoInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInfoInteractorTests.swift; sourceTree = "<group>"; };
+		C1BA66F924B331820077E475 /* FlightInfoPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInfoPresenterTests.swift; sourceTree = "<group>"; };
+		C1BA66FC24B338DF0077E475 /* FlightInfoViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInfoViewControllerMock.swift; sourceTree = "<group>"; };
+		C1BA66FE24B3393D0077E475 /* FlightInfoRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInfoRouterMock.swift; sourceTree = "<group>"; };
+		C1BA670024B33CC10077E475 /* FlightDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailPresenterTests.swift; sourceTree = "<group>"; };
+		C1BA670724B33D8C0077E475 /* FlightDetailViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailViewControllerMock.swift; sourceTree = "<group>"; };
 		DBFD1C4FF7C54F26A308B6C1 /* Pods_RyanAirTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RyanAirTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -163,6 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B89F5483727AB6B8BAAF9084 /* libPods-RyanAirTestTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +189,8 @@
 			children = (
 				3E72E6EBE7C02F2513B2EBCC /* Pods-RyanAirTest.debug.xcconfig */,
 				B935F5531950F32CA85AA172 /* Pods-RyanAirTest.release.xcconfig */,
+				0567EF5116A3498A12DD3441 /* Pods-RyanAirTestTests.debug.xcconfig */,
+				87CB2FACFB9769E077AD867C /* Pods-RyanAirTestTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -181,7 +198,10 @@
 		9107A546B52694C85DC5AD56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1BA662024B315F30077E475 /* Alamofire.framework */,
+				C1BA661E24B3154E0077E475 /* Alamofire.framework */,
 				DBFD1C4FF7C54F26A308B6C1 /* Pods_RyanAirTest.framework */,
+				AAB83B5BB793B1576ECEC23F /* libPods-RyanAirTestTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -225,8 +245,8 @@
 		C109297624AFA2F90006E3A9 /* FlightInfo */ = {
 			isa = PBXGroup;
 			children = (
-				C109297E24AFA3EB0006E3A9 /* Interactor */,
-				C109297D24AFA3E10006E3A9 /* Presenter */,
+				C1BA66FB24B338B40077E475 /* Mocks */,
+				C1BA66F524B329B50077E475 /* Tests */,
 			);
 			path = FlightInfo;
 			sourceTree = "<group>";
@@ -256,22 +276,6 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		C109297D24AFA3E10006E3A9 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				C109297F24AFA3FD0006E3A9 /* FlightInfoPresenterMock.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		C109297E24AFA3EB0006E3A9 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				C109298D24AFA7AF0006E3A9 /* FlightInfoInteractorMock.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
 		C109298124AFA4CB0006E3A9 /* Stubs */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +298,7 @@
 		C109299124AFA8540006E3A9 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				C1BA670624B33D790077E475 /* View */,
 				C109297924AFA3570006E3A9 /* Presenter */,
 				C109297A24AFA35D0006E3A9 /* Interactor */,
 			);
@@ -304,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				C109299324AFA8770006E3A9 /* FlightDetailInteractorTests.swift */,
+				C1BA670024B33CC10077E475 /* FlightDetailPresenterTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -316,7 +322,6 @@
 				C1A5FE7024AE64BD00E05E3B /* FlightDetailViewController.swift */,
 				C1A5FE7124AE64BD00E05E3B /* FlightDetailInteractor.swift */,
 				C1A5FE7224AE64BD00E05E3B /* FlightDetailModel.swift */,
-				C1B5FBF624ACF5E100028C03 /* Test Template */,
 				C1A5FE6E24AE64BD00E05E3B /* FlightDetailPresenter.swift */,
 				C1A5FE6F24AE64BD00E05E3B /* FlightDetailRouter.swift */,
 			);
@@ -381,7 +386,6 @@
 				C109298124AFA4CB0006E3A9 /* Stubs */,
 				C109297724AFA3030006E3A9 /* FlightDetail */,
 				C109297624AFA2F90006E3A9 /* FlightInfo */,
-				C1B5FBDA24ACE14500028C03 /* RyanAirTestTests.swift */,
 				C1B5FBDC24ACE14500028C03 /* Info.plist */,
 				C109297424AFA27D0006E3A9 /* XCTestExtension.swift */,
 			);
@@ -490,6 +494,66 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
+		C1BA66F524B329B50077E475 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C1BA66F624B329C70077E475 /* FlightInfoInteractorTests.swift */,
+				C1BA66F924B331820077E475 /* FlightInfoPresenterTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		C1BA66FB24B338B40077E475 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C1BA670524B33D6D0077E475 /* View */,
+				C1BA670424B33D660077E475 /* Router */,
+				C1BA670324B33D5A0077E475 /* Presenter */,
+				C1BA670224B33D520077E475 /* Interactor */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		C1BA670224B33D520077E475 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C109298D24AFA7AF0006E3A9 /* FlightInfoInteractorMock.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C1BA670324B33D5A0077E475 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C109297F24AFA3FD0006E3A9 /* FlightInfoPresenterMock.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C1BA670424B33D660077E475 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C1BA66FE24B3393D0077E475 /* FlightInfoRouterMock.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C1BA670524B33D6D0077E475 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C1BA66FC24B338DF0077E475 /* FlightInfoViewControllerMock.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C1BA670624B33D790077E475 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C1BA670724B33D8C0077E475 /* FlightDetailViewControllerMock.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -517,6 +581,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1B5FBE224ACE14500028C03 /* Build configuration list for PBXNativeTarget "RyanAirTestTests" */;
 			buildPhases = (
+				DA1D5892B176736961B03090 /* [CP] Check Pods Manifest.lock */,
 				C1B5FBD224ACE14500028C03 /* Sources */,
 				C1B5FBD324ACE14500028C03 /* Frameworks */,
 				C1B5FBD424ACE14500028C03 /* Resources */,
@@ -576,7 +641,6 @@
 			files = (
 				C1B5FBD024ACE14500028C03 /* LaunchScreen.storyboard in Resources */,
 				C1B5FC0124ACF69400028C03 /* FlightInfoViewController.xib in Resources */,
-				C1B5FBFC24ACF5E100028C03 /* Test Template in Resources */,
 				C1B5FBCD24ACE14500028C03 /* Assets.xcassets in Resources */,
 				C109296624AF71240006E3A9 /* FlightView.xib in Resources */,
 				C19431DD24AE03500033A3B2 /* StationTableViewCell.xib in Resources */,
@@ -615,6 +679,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
+		DA1D5892B176736961B03090 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RyanAirTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 		E29F7103DD00B6AF3C8807BE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -707,16 +793,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1BA66FF24B3393D0077E475 /* FlightInfoRouterMock.swift in Sources */,
 				C109298E24AFA7AF0006E3A9 /* FlightInfoInteractorMock.swift in Sources */,
 				C109299024AFA8000006E3A9 /* FlightDetailInteractorMock.swift in Sources */,
 				C109298024AFA3FD0006E3A9 /* FlightInfoPresenterMock.swift in Sources */,
+				C1BA670124B33CC10077E475 /* FlightDetailPresenterTests.swift in Sources */,
+				C1BA66F724B329C70077E475 /* FlightInfoInteractorTests.swift in Sources */,
 				C109299424AFA8770006E3A9 /* FlightDetailInteractorTests.swift in Sources */,
 				C109298C24AFA6C30006E3A9 /* StationRepositoryMock.swift in Sources */,
+				C1BA66FA24B331820077E475 /* FlightInfoPresenterTests.swift in Sources */,
+				C1BA670824B33D8C0077E475 /* FlightDetailViewControllerMock.swift in Sources */,
 				C109297524AFA27D0006E3A9 /* XCTestExtension.swift in Sources */,
 				C109297C24AFA3720006E3A9 /* FlightDetailPresenterMock.swift in Sources */,
-				C1B5FBDB24ACE14500028C03 /* RyanAirTestTests.swift in Sources */,
 				C109298A24AFA6960006E3A9 /* CommonApiError.swift in Sources */,
 				C109298824AFA5820006E3A9 /* FlightRepositoryMock.swift in Sources */,
+				C1BA66FD24B338DF0077E475 /* FlightInfoViewControllerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -904,6 +995,7 @@
 		};
 		C1B5FBE324ACE14500028C03 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0567EF5116A3498A12DD3441 /* Pods-RyanAirTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -926,6 +1018,7 @@
 		};
 		C1B5FBE424ACE14500028C03 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87CB2FACFB9769E077AD867C /* Pods-RyanAirTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
