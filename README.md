@@ -21,7 +21,7 @@ Flow of this app is very simple. Simply fill out the form on the first view and 
 
 ## Tests
 ### XCUnitTest
-I have written a total of 10 tests which gives me a total of 47% of test coverage. All the tests were geared towards making sure that business logic is behaving as it should. This way in the future if I change an important part of my business logic I should get a failed test.
+I have written a total of 8 tests which gives me a total of 85% of test coverage. All the tests were geared towards making sure that business logic is behaving as it should. This way in the future if I change an important part of my business logic I should get a failed test.
 
 As For the UITests, Im afraid I didn´t have enough time to do any. For developing I prefer to use Unit tests and a UITest is quite similar to a QA using Appium so for me I find that unit tests are more important for a reliable code base, I have also found that UITests take quite a long time to load and execute.
 
