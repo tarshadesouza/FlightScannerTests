@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// delegates for flight detailview controller class
 extension FlightDetailViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return flights?.count ?? 0

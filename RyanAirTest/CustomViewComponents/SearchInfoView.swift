@@ -68,7 +68,7 @@ public class SearchInfoView: UIView {
 	}
 	
 	private func configSearchBar() {
-		searchBar.placeholder = "Find what your looking for?"
+		searchBar.placeholder = "Find Station (eg. STN)"
 		searchBar.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
 		mainStackView.addArrangedSubview(searchBar)
 		searchBar.translatesAutoresizingMaskIntoConstraints = false
@@ -101,7 +101,12 @@ public class SearchInfoView: UIView {
 		sender.text.map {
 			if !$0.isEmpty {
 				filteredData = stations?.filter({ (station) -> Bool in
-					return station.name.lowercased().contains((sender.text?.lowercased())!)
+					guard let senderText = sender.text?.lowercased() else {
+						return false
+					}
+					
+					return (station.name.lowercased().contains((senderText))) || (station.code.lowercased().contains((senderText)))
+					
 				}) ?? [Station]()
 				isSearchActive = true
 			} else {
@@ -111,14 +116,6 @@ public class SearchInfoView: UIView {
 			tableView.reloadData()
 		}
 	}
-	
-	// MARK: Public methods
-	public func deselectAllRows() {
-		if let index = tableView.indexPathForSelectedRow {
-			tableView.deselectRow(at: index, animated: true)
-		}
-	}
-	
 }
 
 extension SearchInfoView: UITableViewDataSource, UITableViewDelegate {

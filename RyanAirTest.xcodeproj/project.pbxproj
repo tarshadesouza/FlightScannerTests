@@ -317,27 +317,14 @@
 		C1A5FE7824AE64C300E05E3B /* FlightDetail */ = {
 			isa = PBXGroup;
 			children = (
+				C1BA67E024B351E60077E475 /* ViewModel */,
+				C1BA67DF24B351DE0077E475 /* Router */,
+				C1BA67DE24B351D10077E475 /* View */,
+				C1BA67DD24B351C90077E475 /* Presenter */,
+				C1BA67DC24B351B90077E475 /* Interactor */,
 				C109243A24AF2EDA0006E3A9 /* ControllerDelegates */,
-				C1A5FE7924AE6BD600E05E3B /* Views */,
-				C1A5FE7024AE64BD00E05E3B /* FlightDetailViewController.swift */,
-				C1A5FE7124AE64BD00E05E3B /* FlightDetailInteractor.swift */,
-				C1A5FE7224AE64BD00E05E3B /* FlightDetailModel.swift */,
-				C1A5FE6E24AE64BD00E05E3B /* FlightDetailPresenter.swift */,
-				C1A5FE6F24AE64BD00E05E3B /* FlightDetailRouter.swift */,
 			);
 			path = FlightDetail;
-			sourceTree = "<group>";
-		};
-		C1A5FE7924AE6BD600E05E3B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				C109243324AF2BF10006E3A9 /* Cells */,
-				C1A5FE7A24AE6BEE00E05E3B /* FlightDetailViewController.xib */,
-				C109296324AF71150006E3A9 /* FlightView.swift */,
-				C109296524AF71240006E3A9 /* FlightView.xib */,
-				C109296724AF714D0006E3A9 /* ContentView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		C1B5FBB724ACE14400028C03 = {
@@ -437,12 +424,11 @@
 		C1B5FBFE24ACF61500028C03 /* FlightInfo */ = {
 			isa = PBXGroup;
 			children = (
+				C1BA67E424B352580077E475 /* ViewModel */,
+				C1BA67E324B3524B0077E475 /* Router */,
 				C1B5FBFF24ACF68200028C03 /* Views */,
-				C1B5FBF724ACF5E100028C03 /* FlightInfoModel.swift */,
-				C1B5FBF524ACF5E100028C03 /* FlightInfoInteractor.swift */,
-				C1B5FBF424ACF5E100028C03 /* FlightInfoViewController.swift */,
-				C1B5FBF324ACF5E100028C03 /* FlightInfoRouter.swift */,
-				C1B5FBF224ACF5E100028C03 /* FlightInfoPresenter.swift */,
+				C1BA67E224B352430077E475 /* Presenter */,
+				C1BA67E124B352360077E475 /* Interactor */,
 			);
 			path = FlightInfo;
 			sourceTree = "<group>";
@@ -451,6 +437,7 @@
 			isa = PBXGroup;
 			children = (
 				C1B5FC0D24AD071400028C03 /* Cells */,
+				C1B5FBF424ACF5E100028C03 /* FlightInfoViewController.swift */,
 				C1B5FC0024ACF69400028C03 /* FlightInfoViewController.xib */,
 			);
 			path = Views;
@@ -552,6 +539,83 @@
 				C1BA670724B33D8C0077E475 /* FlightDetailViewControllerMock.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C1BA67DC24B351B90077E475 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C1A5FE7124AE64BD00E05E3B /* FlightDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C1BA67DD24B351C90077E475 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C1A5FE6E24AE64BD00E05E3B /* FlightDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C1BA67DE24B351D10077E475 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C109243324AF2BF10006E3A9 /* Cells */,
+				C1A5FE7A24AE6BEE00E05E3B /* FlightDetailViewController.xib */,
+				C109296324AF71150006E3A9 /* FlightView.swift */,
+				C109296524AF71240006E3A9 /* FlightView.xib */,
+				C109296724AF714D0006E3A9 /* ContentView.swift */,
+				C1A5FE7024AE64BD00E05E3B /* FlightDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C1BA67DF24B351DE0077E475 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C1A5FE6F24AE64BD00E05E3B /* FlightDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C1BA67E024B351E60077E475 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C1A5FE7224AE64BD00E05E3B /* FlightDetailModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C1BA67E124B352360077E475 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5FBF524ACF5E100028C03 /* FlightInfoInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C1BA67E224B352430077E475 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5FBF224ACF5E100028C03 /* FlightInfoPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C1BA67E324B3524B0077E475 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5FBF324ACF5E100028C03 /* FlightInfoRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C1BA67E424B352580077E475 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C1B5FBF724ACF5E100028C03 /* FlightInfoModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

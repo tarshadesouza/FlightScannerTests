@@ -17,6 +17,12 @@ protocol FlightDetailViewProtocol: class {
 
 class FlightDetailViewController: UIViewController, AttentionView {
 		
+	@IBOutlet weak var spinner: UIActivityIndicatorView! {
+		didSet {
+			spinner.isHidden = true
+		}
+	}
+	
 	@IBOutlet weak var tableView: UITableView!
 	
 	var router: FlightDetailRouterProtocol?
@@ -57,6 +63,16 @@ class FlightDetailViewController: UIViewController, AttentionView {
 			self.navigationController?.popViewController(animated: true)
 		}
 	}
+	
+	private func showSpinner(show: Bool) {
+		if show {
+			spinner.isHidden = false
+			spinner.startAnimating()
+		} else {
+			spinner.stopAnimating()
+			spinner.isHidden = true
+		}
+	}
 }
 
 //Routing
@@ -69,6 +85,7 @@ extension FlightDetailViewController {
 //Interaction
 extension FlightDetailViewController {
 	func getFlights() {
+		showSpinner(show: true)
 		guard let request = request else {
 			return
 		}
@@ -79,6 +96,7 @@ extension FlightDetailViewController {
 //Presentation
 extension FlightDetailViewController: FlightDetailViewProtocol {
 	func displayFlights(viewModel: FlightDetail.Model.ViewModel) {
+		showSpinner(show: false)
 		flights = viewModel.flights
 		tableView.reloadData()
 	}
